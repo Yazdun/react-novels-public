@@ -1,4 +1,4 @@
-import { Button, Container } from "./elements";
+import { ErrorHandler } from "./context";
 import "./scss/App.scss";
 import { AppRoutes, PrivateRoute } from "./routes";
 import { Route, Switch } from "react-router-dom";
@@ -8,15 +8,17 @@ function App() {
   return (
     <>
       <Navigation />
-      <Switch>
-        {AppRoutes.map((route, item) =>
-          route.private ? (
-            <PrivateRoute key={item} {...route} />
-          ) : (
-            <Route key={item} {...route} />
-          )
-        )}
-      </Switch>
+      <ErrorHandler>
+        <Switch>
+          {AppRoutes.map((route, item) =>
+            route.private ? (
+              <PrivateRoute key={item} {...route} />
+            ) : (
+              <Route key={item} {...route} />
+            )
+          )}
+        </Switch>
+      </ErrorHandler>
     </>
   );
 }

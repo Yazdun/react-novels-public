@@ -7,7 +7,7 @@ import { useAuthContext } from "../../context";
 import { Link } from "react-router-dom";
 
 export const Navigation = () => {
-  const { isLoggedIn } = useAuthContext();
+  const isLoggedIn = useAuthContext();
   return (
     <Container padding customclass={s.navigation}>
       <Logo />

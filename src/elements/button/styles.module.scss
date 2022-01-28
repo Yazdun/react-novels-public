@@ -7,11 +7,18 @@
   border-radius: $border--radius--min;
   box-shadow: $shadow--1;
   margin: $margin--mid 0;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+
+  svg {
+    margin-right: $margin--min;
+  }
 
   &:hover .hover {
     animation: 2s shine;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { createContext, useState, useEffect, useMemo, useContext } from "react";
-import { useAuthContext, useAuthActions } from "../auth";
+import { useAuthContext, useAuthActions } from "..";
 import { Error } from "../../pages";
 
 const ErrorStatusContext = createContext();
@@ -38,7 +38,12 @@ export const ErrorHandler = ({ children }) => {
         return children;
 
       case errorStatusCode === 404:
-        return <Page404 />;
+        return (
+          <Error
+            title="404 ! Not found ..."
+            message="this content either doesn't exist or has been deleted"
+          />
+        );
 
       case errorStatusCode >= 500:
         return (
