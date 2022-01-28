@@ -22,3 +22,21 @@
   height: toRem(20);
   margin: 0 $padding--low;
 }
+
+.user {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+
+  a {
+    display: flex;
+  }
+
+  button {
+    display: flex;
+  }
+
+  svg {
+    margin-left: $margin--low;
+  }
+}

@@ -6,20 +6,18 @@ import { Navigation } from "./components";
 
 function App() {
   return (
-    <>
+    <ErrorHandler>
       <Navigation />
-      <ErrorHandler>
-        <Switch>
-          {AppRoutes.map((route, item) =>
-            route.private ? (
-              <PrivateRoute key={item} {...route} />
-            ) : (
-              <Route key={item} {...route} />
-            )
-          )}
-        </Switch>
-      </ErrorHandler>
-    </>
+      <Switch>
+        {AppRoutes.map((route, item) =>
+          route.private ? (
+            <PrivateRoute key={item} {...route} />
+          ) : (
+            <Route key={item} {...route} />
+          )
+        )}
+      </Switch>
+    </ErrorHandler>
   );
 }
 

@@ -7,6 +7,7 @@
 // background colors
 $clr--bg--primary: #f8f8ff;
 $clr--bg--secondary: white;
+$clr--bg--transparent: #edf2fb;
 
 // contrast colors
 $clr--contrast--primary: #212529;
@@ -18,7 +19,7 @@ $clr--danger--secondary: #e01e37;
 
 // active colors
 $clr--active--primary: #06f;
-$clr--active--secondary: rgb(0, 73, 184);
+$clr--active--secondary: #004aba;
 
 // success colors
 $clr--success--primary: #3eaf2a;
@@ -38,7 +39,8 @@ $clr--border: #ced4da;
 
 // box shadows
 $shadow--1: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
+$shadow--2: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+  rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 // paddings
 $padding--min: toRem(5);
 $padding--low: toRem(10);
@@ -58,13 +60,14 @@ $max-width-desktop: 1024px;
 // border radius
 $border--radius--min: 3px;
 $border--radius--low: 5px;
+$border--radius--mid: 8px;
 // fonts
 $font-main: "Poppins", sans-serif;
 $font-secondary: "Roboto Mono", monospace;
 $font-cursive: "Russo One", "Poppins", sans-serif;
 // z index
 $zindex--modal: 1000;
-$zindex--sidebar: 999;
+$zindex--user--popup: 999;
 $zindex--blur--background: 998;
 $zindex--alert: 997;
 $zindex--showcase: 996;

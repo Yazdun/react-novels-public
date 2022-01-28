@@ -75,4 +75,11 @@ export const ErrorHandler = ({ children }) => {
   );
 };
 
-export const useErrorStatus = () => useContext(ErrorStatusContext);
+// export const useErrorStatus = () => useContext(ErrorStatusContext);
+
+export const useErrorStatus = () => {
+  const value = useContext(ErrorStatusContext);
+  if (value === undefined)
+    console.warn("there is no provider for useErrorStatus");
+  return value;
+};

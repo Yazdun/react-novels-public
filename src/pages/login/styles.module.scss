@@ -1,1 +1,21 @@
 @import "../../scss/essentials";
+
+.form {
+  width: 100%;
+  max-width: $max-width-mobile;
+  margin: auto;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+.img {
+  width: 100%;
+  max-width: toRem(200);
+  margin: auto;
+
+  img {
+    max-width: 100%;
+  }
+}

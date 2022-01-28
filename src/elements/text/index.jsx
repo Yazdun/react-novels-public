@@ -15,6 +15,7 @@ export const Text = ({
   big,
   bold,
   thin,
+  center,
 }) => {
   return (
     <p
@@ -31,7 +32,8 @@ export const Text = ({
         medium && s.medium,
         big && s.big,
         bold && s.bold,
-        thin && s.thin
+        thin && s.thin,
+        center && s.center
       )}
     >
       {children}

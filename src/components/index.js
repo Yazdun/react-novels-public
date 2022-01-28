@@ -5,3 +5,4 @@ export { RelatedNovels } from "./related_novels";
 export { ReviewCard } from "./review";
 export { UserCard } from "./user";
 export { Logo } from "./logo";
+export { UserPopup } from "./user_popup";
