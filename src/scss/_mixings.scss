@@ -1,0 +1,63 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin breakpoint-up($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (min-width: 481px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (min-width: 769px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+  @if $breakpoint == wide {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: 481px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (max-width: 769px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (max-width: 1025px) {
+      @content;
+    }
+  }
+  @if $breakpoint == wide {
+    @media (max-width: 1201px) {
+      @content;
+    }
+  }
+}

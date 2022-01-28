@@ -1,0 +1,39 @@
+@import "../../scss/essentials";
+
+.text {
+  line-height: 2rem;
+}
+.danger {
+  color: $clr--danger--primary;
+}
+.success {
+  color: $clr--success--primary;
+}
+.active {
+  color: $clr--active--primary;
+}
+.secondary {
+  color: $clr--txt--secondary;
+}
+.light {
+  color: $clr--txt--light;
+}
+.warn {
+  color: $clr--warn--primary;
+}
+.small {
+  font-size: 0.9rem;
+}
+.medium {
+  font-size: 1.2rem;
+}
+.big {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+.bold {
+  font-weight: 600;
+}
+.thin {
+  font-weight: 300;
+}

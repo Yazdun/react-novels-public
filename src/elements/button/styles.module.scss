@@ -1,0 +1,74 @@
+@import "../../scss/essentials";
+
+.btn {
+  padding: $padding--low;
+  background-color: $clr--contrast--primary;
+  color: $clr--txt--light;
+  border-radius: $border--radius--min;
+  box-shadow: $shadow--1;
+  margin: $margin--mid 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+
+  &:hover .hover {
+    animation: 2s shine;
+  }
+}
+
+.hover {
+  position: absolute;
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.active {
+  background-color: $clr--active--primary;
+}
+
+.danger {
+  background-color: $clr--danger--primary;
+}
+
+.success {
+  background-color: $clr--success--primary;
+}
+
+.center {
+  margin: $margin--mid auto;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.fixedwidth {
+  width: 100%;
+  max-width: toRem(200);
+}
+
+@keyframes shine {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  1% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.2;
+  }
+  2% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}

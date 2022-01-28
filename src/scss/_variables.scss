@@ -1,0 +1,70 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+@import "./functions";
+
+// background colors
+$clr--bg--primary: #f8f8ff;
+$clr--bg--secondary: white;
+
+// contrast colors
+$clr--contrast--primary: #212529;
+$clr--contrast--secondary: #4a4e69;
+
+// danger colors
+$clr--danger--primary: #ed2c49;
+$clr--danger--secondary: #e01e37;
+
+// active colors
+$clr--active--primary: #06f;
+$clr--active--secondary: rgb(0, 73, 184);
+
+// success colors
+$clr--success--primary: #3eaf2a;
+$clr--success--secondary: #56ab91;
+
+// warn colors
+$clr--warn--primary: #ffb700;
+$clr--warn--secondary: #ff8800;
+
+// texts
+$clr--txt--primary: #14213d;
+$clr--txt--secondary: #727797;
+$clr--txt--light: #f8f8ff;
+$clr--txt--transparent: #9b9b9b;
+// border
+$clr--border: #ced4da;
+
+// box shadows
+$shadow--1: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+// paddings
+$padding--min: toRem(5);
+$padding--low: toRem(10);
+$padding--mid: toRem(20);
+$padding--high: toRem(40);
+
+// margins
+$margin--min: toRem(5);
+$margin--low: toRem(10);
+$margin--mid: toRem(20);
+$margin--high: toRem(40);
+// max widths
+$max-width-mobile: 375px;
+$max-width-tablet: 481px;
+$max-width-laptop: 581px;
+$max-width-desktop: 1024px;
+// border radius
+$border--radius--min: 3px;
+// fonts
+$font-main: "Poppins", sans-serif;
+$font-secondary: "Roboto Mono", monospace;
+$font-cursive: "Russo One", "Poppins", sans-serif;
+// z index
+$zindex--modal: 1000;
+$zindex--sidebar: 999;
+$zindex--blur--background: 998;
+$zindex--alert: 997;
+$zindex--showcase: 996;
+$zindex--navigation: 995;

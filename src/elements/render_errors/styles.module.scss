@@ -1,0 +1,15 @@
+@import "../../scss/essentials";
+
+.wrapper {
+  margin: $margin--mid 0;
+}
+.err {
+  color: $clr--danger--secondary;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  margin: $margin--low 0;
+  svg {
+    margin-right: toRem(5);
+  }
+}

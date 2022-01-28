@@ -1,0 +1,19 @@
+@import "../../scss/essentials";
+
+.logo {
+  display: flex;
+  // font-family: $font-cursive;
+  text-transform: uppercase;
+  font-size: 2rem;
+  align-items: flex-start;
+  transition: 0.3s ease;
+  color: $clr--active--primary;
+
+  svg {
+    margin-right: $margin--min;
+  }
+
+  &:hover {
+    color: $clr--active--secondary;
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../scss/essentials";
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.vl {
+  border-left: 2px solid $clr--active--primary;
+  height: toRem(20);
+  margin: 0 $padding--low;
+}
