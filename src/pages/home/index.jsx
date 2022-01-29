@@ -1,11 +1,27 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
 import { Container, Heading, Text } from "../../elements";
+import { RenderNovelCards } from "../../components/novel";
+import { useGet } from "../../hooks";
+import { useEffect } from "react";
+import { useState } from "react/cjs/react.development";
+import { GET_ALL_NOVELS } from "../../services";
 
 export const Home = () => {
+  const { getRequest, getLoading } = useGet();
+  const [novels, setNovels] = useState();
+
+  const handleNovels = (data) => setNovels(data.novels);
+
+  useEffect(() => {
+    getRequest(GET_ALL_NOVELS, handleNovels);
+  }, []);
+
   return (
     <>
       <Hero />
+
+      {novels && <RenderNovelCards novels={novels} />}
     </>
   );
 };

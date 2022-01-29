@@ -1,1 +1,71 @@
 @import "../../scss/essentials";
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //   background-color: gray;
+}
+
+.cover {
+  position: relative;
+  img {
+    width: 100%;
+    max-width: toRem(150);
+
+    border-radius: $border--radius--low;
+    height: toRem(200);
+  }
+}
+.title {
+  margin-bottom: 0;
+}
+
+.like {
+  position: absolute;
+  background-color: $clr--danger--primary;
+  padding: $padding--min;
+  color: $clr--txt--light;
+  border-radius: $border--radius--low;
+  font-size: 1.5rem;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-left: $margin--min;
+  }
+}
+
+.link {
+  border-bottom: 1px solid $clr--border;
+  padding: $padding--mid;
+  display: block;
+  transition: 0.3s ease;
+
+  @include breakpoint-up(tablet) {
+    // border: none;
+    border: 1px solid $clr--border--transparent;
+
+    &:hover {
+      border: 1px solid $clr--border--cotrast;
+    }
+  }
+}
+
+.render {
+  @include breakpoint-up(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: $max-width-desktop;
+    margin: auto;
+    padding: $padding--mid;
+
+    // grid-gap: 2rem;
+  }
+  @include breakpoint-up(laptop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
