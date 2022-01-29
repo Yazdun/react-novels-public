@@ -15,6 +15,7 @@ export const Heading = ({
   center,
   capitalize,
   uppercase,
+  customclass,
 }) => {
   return (
     <h1
@@ -31,7 +32,8 @@ export const Heading = ({
         thin && s.thin,
         center && s.center,
         capitalize && s.capitalize,
-        uppercase && s.uppercase
+        uppercase && s.uppercase,
+        customclass && customclass
       )}
     >
       {children}

@@ -1,1 +1,44 @@
 @import "../../scss/essentials";
+
+.wrapper {
+  @include breakpoint-up(laptop) {
+    padding: 0 $padding--mid;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: toRem(100);
+  background-image: url("./backgrounds/mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: toRem(570);
+  border-bottom: 10px solid $clr--bg--primary;
+
+  @include breakpoint-up(tablet) {
+    background-image: url("./backgrounds/tablet.svg");
+  }
+
+  @include breakpoint-up(laptop) {
+    border-radius: $border--radius--mid;
+    background-image: url("./backgrounds/desktop.svg");
+  }
+}
+
+.heading {
+  font-family: $font-cursive;
+  padding-top: toRem(100);
+  margin: 0;
+  animation: 3s title;
+}
+
+@keyframes title {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

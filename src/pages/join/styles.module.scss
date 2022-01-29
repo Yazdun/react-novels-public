@@ -1,1 +1,46 @@
 @import "../../scss/essentials";
+
+.form {
+  width: 100%;
+  max-width: $max-width-mobile;
+  margin: auto;
+  // margin-top: $margin--high;
+
+  a {
+    font-weight: bold;
+  }
+
+  @include breakpoint-up(desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: $max-width-desktop;
+    justify-content: space-between;
+  }
+}
+
+.img {
+  width: 100%;
+  max-width: toRem(200);
+  margin: auto;
+
+  img {
+    max-width: 100%;
+  }
+
+  @include breakpoint-up(desktop) {
+    margin: 0;
+    width: 40%;
+    min-width: toRem(320);
+    max-width: 100%;
+  }
+}
+
+.fields {
+  @include breakpoint-up(desktop) {
+    width: 50%;
+  }
+}
+
+.heading {
+  font-family: $font-cursive;
+}

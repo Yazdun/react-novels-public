@@ -18,9 +18,11 @@
 }
 
 .vl {
-  border-left: 2px solid $clr--active--primary;
+  border: 1px solid $clr--active--primary;
+  // border-right: 3px solid $clr--active--primary;
+  background-color: $clr--active--primary;
   height: toRem(20);
-  margin: 0 $padding--low;
+  margin: 0 $margin--low;
 }
 
 .user {

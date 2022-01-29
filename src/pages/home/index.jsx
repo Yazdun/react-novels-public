@@ -4,12 +4,20 @@ import { Container, Heading, Text } from "../../elements";
 
 export const Home = () => {
   return (
-    <Container padding>
-      <Heading uppercase>Homepage</Heading>
-      <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum enim
-        qui nisi quis odio itaque beatae corrupti dolore, ut deserunt.
-      </Text>
+    <>
+      <Hero />
+    </>
+  );
+};
+
+const Hero = () => {
+  return (
+    <Container customclass={s.wrapper}>
+      <div className={s.hero}>
+        <Heading light uppercase customclass={s.heading} center big>
+          Novels
+        </Heading>
+      </div>
     </Container>
   );
 };

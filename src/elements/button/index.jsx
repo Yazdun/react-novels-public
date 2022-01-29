@@ -1,8 +1,10 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
+import { Spinner } from "..";
 
 export const Button = ({
-  children,
+  text,
+  icon,
   disabled,
   active,
   success,
@@ -16,6 +18,8 @@ export const Button = ({
     <button
       className={classnames(
         s.btn,
+        text,
+        icon,
         active && s.active,
         success && s.success,
         danger && s.danger,
@@ -27,7 +31,8 @@ export const Button = ({
       disabled={disabled}
     >
       <div className={s.hover}></div>
-      {children}
+      {disabled ? <Spinner small transparent /> : icon}
+      {text}
     </button>
   );
 };

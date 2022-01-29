@@ -51,9 +51,13 @@ export const Login = () => {
                 <Link to="/join">Join us</Link>
               </span>
             </Text>
-            <Button active disabled={postLoading} center>
-              <MdLogin /> login
-            </Button>
+            <Button
+              active
+              disabled={postLoading}
+              center
+              icon={<MdLogin />}
+              text="login"
+            />
           </div>
         </form>
       </FormProvider>

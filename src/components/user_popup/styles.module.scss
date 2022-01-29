@@ -14,7 +14,7 @@
   margin: auto;
   max-width: $max-width-desktop;
   padding: $padding--mid;
-  top: toRem(70);
+  top: toRem(53);
 
   @include breakpoint-up(tablet) {
     width: toRem(300);

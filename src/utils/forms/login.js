@@ -17,7 +17,7 @@ export const LoginFormfields = [
     name: "password",
     label: "password",
     type: "password",
-    id: "nationality",
+    id: "password",
     placeholder: "e.g password",
     validation: {
       required: {
