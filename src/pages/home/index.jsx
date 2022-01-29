@@ -20,8 +20,7 @@ export const Home = () => {
   return (
     <>
       <Hero />
-
-      {novels && <RenderNovelCards novels={novels} />}
+      {novels && <RenderNovelCards novels={novels} loading={true} />}
     </>
   );
 };

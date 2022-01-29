@@ -6,3 +6,4 @@ export { Heading } from "./heading";
 export { Text } from "./text";
 export { RenderErrors } from "./render_errors";
 export { Spinner } from "./spinner";
+export { Loading } from "./loading";

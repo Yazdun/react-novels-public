@@ -23,9 +23,10 @@ export const NovelCard = ({ novel }) => {
   );
 };
 
-export const RenderNovelCards = ({ novels }) => {
+export const RenderNovelCards = ({ novels, loading }) => {
   let max = novels.length;
   const [count, setCount] = useState(8);
+
   return (
     <>
       <div className={s.render}>
