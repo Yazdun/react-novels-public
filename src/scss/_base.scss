@@ -1,7 +1,17 @@
 html {
   box-sizing: border-box;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(107, 107, 107);
+}
 *,
 *::before,
 *::after {

@@ -26,6 +26,7 @@
 
 .card {
   box-shadow: $shadow--2;
+  // border: 1px solid white;
   z-index: $zindex--user--popup;
   background-color: $clr--bg--primary;
   border-radius: $border--radius--mid;

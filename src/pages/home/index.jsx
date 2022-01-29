@@ -9,7 +9,7 @@ import { GET_ALL_NOVELS } from "../../services";
 
 export const Home = () => {
   const { getRequest, getLoading } = useGet();
-  const [novels, setNovels] = useState();
+  const [novels, setNovels] = useState([]);
 
   const handleNovels = (data) => setNovels(data.novels);
 
@@ -20,7 +20,7 @@ export const Home = () => {
   return (
     <>
       <Hero />
-      {novels && <RenderNovelCards novels={novels} loading={true} />}
+      <RenderNovelCards novels={novels} loading={getLoading} />
     </>
   );
 };

@@ -43,12 +43,16 @@
   padding: $padding--mid;
   display: block;
   transition: 0.3s ease;
+  background-color: $clr--bg--primary;
   @include breakpoint-up(tablet) {
     // border: none;
     border: 1px solid $clr--border--transparent;
-
+  }
+  @include breakpoint-up(laptop) {
     &:hover {
       border: 1px solid $clr--border--cotrast;
+      transform: scale(1.1);
+      z-index: 2;
     }
   }
 }
@@ -60,8 +64,6 @@
     width: 100%;
     max-width: $max-width-desktop;
     margin: auto;
-
-    // grid-gap: 2rem;
   }
   @include breakpoint-up(laptop) {
     grid-template-columns: repeat(3, 1fr);
@@ -78,6 +80,10 @@
   text-transform: uppercase;
   text-align: center;
   width: 100%;
+
+  &:hover {
+    transform: none;
+  }
 }
 
 .loading {

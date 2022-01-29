@@ -1,9 +1,10 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
-import { Heading } from "../../elements";
+import { Container, Heading } from "../../elements";
 import { BsHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+import { useState, useRef } from "react/cjs/react.development";
+import { Loading } from "../../elements";
 
 export const NovelCard = ({ novel }) => {
   const { image, title, likes } = novel;
@@ -26,6 +27,14 @@ export const NovelCard = ({ novel }) => {
 export const RenderNovelCards = ({ novels, loading }) => {
   let max = novels.length;
   const [count, setCount] = useState(8);
+
+  if (loading) {
+    return (
+      <Container padding>
+        <Loading height={825} />
+      </Container>
+    );
+  }
 
   return (
     <>
