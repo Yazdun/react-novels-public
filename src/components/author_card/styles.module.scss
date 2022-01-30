@@ -1,0 +1,30 @@
+@import "../../scss/essentials";
+
+.image {
+  width: toRem(50);
+  height: toRem(50);
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: $margin--low;
+  outline: 3px solid $clr--bg--primary;
+}
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding--low;
+  border-radius: $border--radius--low;
+  margin: $margin--mid 0;
+  text-transform: capitalize;
+  font-weight: 500;
+  border: 1px solid $clr--border;
+  background-color: $clr--bg--primary;
+}
+
+.transparent {
+  background-color: $clr--bg--gradient;
+  border: none;
+  p {
+    color: $clr--txt--light;
+  }
+}

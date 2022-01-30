@@ -1,0 +1,49 @@
+@import "../../scss/essentials";
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  // z-index: -1;
+
+  @include breakpoint-up(laptop) {
+    border-radius: $border--radius--low;
+    margin: 0;
+  }
+}
+
+.cover {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(20%) blur(0.7rem);
+  transform: scale(1.1);
+  z-index: -1;
+  background-color: $clr--contrast--primary;
+}
+.title {
+  margin: 0;
+}
+
+.body {
+  padding: $padding--mid;
+  width: 100%;
+  max-width: toRem(420);
+  margin: auto;
+  text-align: center;
+
+  ul {
+    width: 100%;
+    background-color: $clr--bg--gradient;
+    border-radius: $border--radius--low;
+    padding: $padding--mid;
+    color: $clr--txt--light;
+    text-transform: capitalize;
+  }
+
+  ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: $margin--low 0;
+  }
+}

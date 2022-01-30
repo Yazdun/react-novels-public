@@ -41,7 +41,11 @@ export const RenderNovelCards = ({ novels, loading }) => {
       <div className={s.render}>
         {novels.slice(0, count).map((novel) => {
           return (
-            <Link to={`/novel/${novel._id}`} className={s.link}>
+            <Link
+              to={`/novel/${novel._id}/overview`}
+              className={s.link}
+              key={novel._id}
+            >
               <NovelCard novel={novel} />
             </Link>
           );

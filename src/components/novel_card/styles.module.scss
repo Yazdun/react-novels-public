@@ -45,7 +45,6 @@
   transition: 0.3s ease;
   background-color: $clr--bg--primary;
   @include breakpoint-up(tablet) {
-    // border: none;
     border: 1px solid $clr--border--transparent;
   }
   @include breakpoint-up(laptop) {

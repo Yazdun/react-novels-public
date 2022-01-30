@@ -4,7 +4,7 @@ import classnames from "classnames";
 export const ReviewCard = () => {
   return (
     <div>
-      <h1>index</h1>
+      <h1>reviews</h1>
     </div>
   );
 };

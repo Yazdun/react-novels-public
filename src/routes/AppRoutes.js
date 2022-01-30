@@ -22,7 +22,7 @@ export const AppRoutes = [
     component: Author,
   },
   {
-    exact: true,
+    // exact: true,
     path: "/novel/:id",
     component: Novel,
   },

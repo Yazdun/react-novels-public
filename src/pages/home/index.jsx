@@ -1,7 +1,7 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
 import { Container, Heading, Text } from "../../elements";
-import { RenderNovelCards } from "../../components/novel";
+import { RenderNovelCards } from "../../components";
 import { useGet } from "../../hooks";
 import { useEffect } from "react";
 import { useState } from "react/cjs/react.development";

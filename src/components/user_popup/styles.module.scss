@@ -1,6 +1,8 @@
 @import "../../scss/essentials";
 
 .wrapper {
+  z-index: $zindex--user--popup;
+
   @include breakpoint-up(tablet) {
     position: relative;
   }
@@ -14,7 +16,7 @@
   margin: auto;
   max-width: $max-width-desktop;
   padding: $padding--mid;
-  top: toRem(53);
+  top: toRem(52);
 
   @include breakpoint-up(tablet) {
     width: toRem(300);
@@ -27,7 +29,6 @@
 .card {
   box-shadow: $shadow--2;
   // border: 1px solid white;
-  z-index: $zindex--user--popup;
   background-color: $clr--bg--primary;
   border-radius: $border--radius--mid;
   overflow: hidden;

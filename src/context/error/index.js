@@ -42,6 +42,7 @@ export const ErrorHandler = ({ children }) => {
           <Error
             title="404 ! Not found ..."
             message="this content either doesn't exist or has been deleted"
+            action
           />
         );
 
@@ -50,14 +51,15 @@ export const ErrorHandler = ({ children }) => {
           <Error
             title="500 ! Our fault ..."
             message="there is a problem within our servers, we are looking into it ..."
+            action
           />
         );
 
       case errorStatusCode === "NETWORK":
         return (
           <Error
-            title="Oops ! Network Error..."
-            message="request is failed, something wrong with your network"
+            title="network error"
+            info="request is failed, something wrong with your network"
           />
         );
 
