@@ -1,6 +1,6 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
-import { Container, RenderText, Text } from "../../elements";
+import { Container, RenderText, Spinner, Text } from "../../elements";
 import { NovelHeader, ReviewCard } from "../../components";
 import { Link, Route, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -17,6 +17,10 @@ export const Novel = () => {
   useEffect(() => {
     getRequest(GET_SINGLE_NOVEL(id), handleNovel);
   }, []);
+
+  if (getLoading) {
+    return <Spinner center />;
+  }
   return (
     <Container customclass={s.wrapper}>
       <NovelHeader novel={novel} />

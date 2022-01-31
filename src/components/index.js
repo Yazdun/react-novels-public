@@ -6,4 +6,5 @@ export { NovelHeader } from "./novel_header";
 export { ReviewCard } from "./review";
 export { UserCard } from "./user";
 export { Logo } from "./logo";
+export { Rate } from "./rate";
 export { UserPopup } from "./user_popup";

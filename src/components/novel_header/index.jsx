@@ -2,10 +2,12 @@ import s from "./styles.module.scss";
 import classnames from "classnames";
 import { Container, Heading } from "../../elements";
 import { Link } from "react-router-dom";
-import { AuthorCard } from "..";
+import { AuthorCard, Rate } from "..";
 
 export const NovelHeader = ({ novel }) => {
-  const { image, title, authorInfo, pages, publish } = novel;
+  const { image, title, authorInfo, pages, publish, rate, basedOnReviews } =
+    novel;
+  console.log(novel);
   return (
     <Container customclass={s.wrapper}>
       <img className={s.cover} src={image} alt="" />
@@ -22,6 +24,7 @@ export const NovelHeader = ({ novel }) => {
             pages : <span>{pages}</span>
           </li>
         </ul>
+        <Rate rate={rate} basedOnReviews={basedOnReviews} />
       </div>
     </Container>
   );

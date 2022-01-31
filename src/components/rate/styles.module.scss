@@ -1,0 +1,43 @@
+@import "../../scss/essentials";
+
+.big {
+  margin: $margin--mid 0;
+  border-radius: $border--radius--low;
+  padding: $padding--mid;
+  color: $clr--txt--light;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .rate {
+    font-size: 2rem;
+    text-transform: uppercase;
+    // font-family: $font-cursive;
+  }
+
+  .based {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &.na {
+    background-color: $clr--bg--gradient;
+  }
+
+  &.awful {
+    background-image: url("./backgrounds/awful.svg");
+  }
+  &.meh {
+    background-image: url("./backgrounds/meh.svg");
+    // color: $clr--txt--primary;
+  }
+  &.good {
+    background-image: url("./backgrounds/good.svg");
+  }
+  &.great {
+    background-image: url("./backgrounds/great.svg");
+    // color: $clr--txt--primary;
+  }
+  &.masterpiece {
+    background-image: url("./backgrounds/masterpiece.svg");
+  }
+}
