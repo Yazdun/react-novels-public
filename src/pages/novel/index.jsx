@@ -1,7 +1,7 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
 import { Container, RenderText, Spinner, Text } from "../../elements";
-import { NovelHeader, ReviewCard } from "../../components";
+import { NovelHeader, NovelSuggestion, ReviewCard } from "../../components";
 import { Link, Route, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useGet } from "../../hooks";
@@ -30,6 +30,7 @@ export const Novel = () => {
           customclass={s.rendertext}
         />
       </div>
+      <NovelSuggestion />
     </Container>
   );
 };

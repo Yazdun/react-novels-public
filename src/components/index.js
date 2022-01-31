@@ -1,7 +1,7 @@
 export { AuthorPreview } from "./author_preview";
 export { Navigation } from "./navigation";
 export { NovelPreview, RenderNovelPreviews } from "./novel_preview";
-export { NovelCard } from "./novel_card";
+export { NovelSuggestion } from "./novel_suggestion";
 export { NovelHeader } from "./novel_header";
 export { ReviewCard } from "./review";
 export { UserCard } from "./user";
