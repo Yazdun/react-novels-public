@@ -2,7 +2,7 @@ import s from "./styles.module.scss";
 import classnames from "classnames";
 import { Container, Heading } from "../../elements";
 import { Link } from "react-router-dom";
-import { AuthorCard, Rate } from "..";
+import { AuthorPreview, Rate } from "..";
 
 export const NovelHeader = ({ novel }) => {
   const { image, title, authorInfo, pages, publish, rate, basedOnReviews } =
@@ -15,7 +15,7 @@ export const NovelHeader = ({ novel }) => {
         <Heading uppercase medium center light customclass={s.title}>
           {title}
         </Heading>
-        {authorInfo && <AuthorCard transparent author={authorInfo} />}
+        {authorInfo && <AuthorPreview transparent author={authorInfo} />}
         <ul>
           <li>
             published : <span>{publish}</span>

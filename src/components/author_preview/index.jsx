@@ -5,7 +5,7 @@ import { useState } from "react";
 import { placeholder } from "../../assets";
 import { BsStarFill } from "react-icons/bs";
 
-export const AuthorCard = ({ author, transparent }) => {
+export const AuthorPreview = ({ author, transparent }) => {
   const [info, setInfo] = useState(
     author || { url: "/", image: null, name: "john doe" }
   );
