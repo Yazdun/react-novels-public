@@ -3,6 +3,7 @@ import classnames from "classnames";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { placeholder } from "../../assets";
+import { BsStarFill } from "react-icons/bs";
 
 export const AuthorCard = ({ author, transparent }) => {
   const [info, setInfo] = useState(
@@ -14,7 +15,13 @@ export const AuthorCard = ({ author, transparent }) => {
       className={classnames(s.author, transparent && s.transparent)}
     >
       <img className={s.image} src={info.image} alt={placeholder} />
-      <p>{info.name}</p>
+      <div className={s.info}>
+        <p className={s.name}>{info.name}</p>
+        <div className={s.star}>
+          <BsStarFill />
+          <p>{info.stars.length}</p>
+        </div>
+      </div>
     </Link>
   );
 };

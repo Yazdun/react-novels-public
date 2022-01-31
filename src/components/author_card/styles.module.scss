@@ -1,8 +1,8 @@
 @import "../../scss/essentials";
 
 .image {
-  width: toRem(50);
-  height: toRem(50);
+  width: toRem(80);
+  height: toRem(80);
   object-fit: cover;
   border-radius: 50%;
   margin-right: $margin--low;
@@ -24,7 +24,33 @@
 .transparent {
   background-color: $clr--bg--gradient;
   border: none;
+}
+
+.name {
+  color: $clr--txt--light;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.star {
+  background-color: $clr--warn--primary;
+  padding: $padding--min;
+  margin-top: $margin--low;
+  border-radius: $border--radius--low;
+  align-self: flex-start;
+  display: flex;
+  align-items: flex-start;
+
+  svg {
+    margin-right: $margin--min;
+  }
+
   p {
-    color: $clr--txt--light;
+    // align-self: flex-start;
+    font-size: 1.05rem;
   }
 }

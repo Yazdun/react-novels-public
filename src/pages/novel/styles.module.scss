@@ -5,3 +5,10 @@
     padding: 0 $padding--mid;
   }
 }
+
+.rendertext {
+  padding: 0 $padding--mid;
+  @include breakpoint-up(laptop) {
+    padding: 0;
+  }
+}
