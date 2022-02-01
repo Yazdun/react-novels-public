@@ -5,3 +5,5 @@ export const GET_USER_INFO = "/protected/user/";
 
 export const GET_ALL_NOVELS = "/public/novel";
 export const GET_SINGLE_NOVEL = (id) => `/public/novel/find/${id}`;
+
+export const GET_RELATED_NOVELS = (id) => `/public/novel/related/${id}`;

@@ -7,7 +7,7 @@ import { AuthorPreview, Rate } from "..";
 export const NovelHeader = ({ novel }) => {
   const { image, title, authorInfo, pages, publish, rate, basedOnReviews } =
     novel;
-  console.log(novel);
+
   return (
     <Container customclass={s.wrapper}>
       <img className={s.cover} src={image} alt="" />

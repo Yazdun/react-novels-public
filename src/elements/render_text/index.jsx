@@ -8,8 +8,12 @@ export const RenderText = ({ content }) => {
   if (readmore) {
     return (
       <>
-        {content.map((paragraph) => {
-          return <Text customclass={s.text}>{paragraph}</Text>;
+        {content.map((paragraph, index) => {
+          return (
+            <Text customclass={s.text} key={index}>
+              {paragraph}
+            </Text>
+          );
         })}
         <button className={s.btn} onClick={() => setReadmore(false)}>
           ... Read less

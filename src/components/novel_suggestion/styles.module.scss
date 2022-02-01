@@ -1,1 +1,38 @@
 @import "../../scss/essentials";
+
+.card {
+  width: 100%;
+}
+
+.text {
+  padding: $padding--mid;
+  // font-size: 1.3rem;
+  font-weight: 700;
+
+  @include breakpoint-up(laptop) {
+    padding: $padding--mid 0;
+  }
+}
+
+.carousel {
+  @include breakpoint-up(tablet) {
+    display: none;
+  }
+}
+
+.image {
+  height: toRem(550);
+  object-fit: cover;
+}
+
+.legend {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  // bottom: 130px;
+  top: 0;
+  color: $clr--txt--light;
+  padding: $padding--mid;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
