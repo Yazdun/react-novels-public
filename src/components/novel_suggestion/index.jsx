@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useState } from "react/cjs/react.development";
 import { GET_RELATED_NOVELS } from "../../services";
 import { Heading, Loading, Text } from "../../elements";
+import { Link } from "react-router-dom";
 
 export const NovelSuggestion = () => {
   const [novels, setNovels] = useState([]);
@@ -26,10 +27,10 @@ export const NovelSuggestion = () => {
   }, [id]);
 
   if (getLoading) {
-    return <Loading height={600} />;
+    return <Loading height={500} />;
   }
   return (
-    <>
+    <div className={s.wrapper}>
       <Text bold customclass={s.text}>
         You may also be interested in 👇
       </Text>
@@ -43,15 +44,39 @@ export const NovelSuggestion = () => {
       >
         {novels.map((novel) => {
           return (
-            <div key={novel._id} className={s.card}>
+            <div key={novel._id}>
               <img src={novel.image} className={s.image} />
               <Text bold customclass={s.legend}>
                 {novel.title}
+
+                <span>{novel.author}</span>
+                <span>~ {novel.publish}</span>
               </Text>
             </div>
           );
         })}
       </Carousel>
-    </>
+      <div className={s.desktop}>
+        {novels.map((novel) => {
+          return (
+            <div
+              className={s.card}
+              key={novel._id}
+              onClick={() => {
+                history.push(`/novel/${novel._id}`);
+              }}
+            >
+              <img src={novel.image} className={s.cover} />
+              <Text center bold customclass={s.legend}>
+                {novel.title}
+
+                <span>{novel.author}</span>
+                <span>~ {novel.publish}</span>
+              </Text>
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 };

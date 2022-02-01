@@ -1,7 +1,5 @@
 import s from "./styles.module.scss";
-import classnames from "classnames";
 import { Container, Heading } from "../../elements";
-import { Link } from "react-router-dom";
 import { AuthorPreview, Rate } from "..";
 
 export const NovelHeader = ({ novel }) => {

@@ -1,21 +1,18 @@
 @import "../../scss/essentials";
-
-.card {
-  width: 100%;
+.wrapper {
+  padding: $padding--mid 0;
 }
-
 .text {
-  padding: $padding--mid;
-  // font-size: 1.3rem;
+  padding: 0 $padding--mid $padding--mid $padding--mid;
   font-weight: 700;
 
   @include breakpoint-up(laptop) {
-    padding: $padding--mid 0;
+    padding: 0 0 $padding--mid 0;
   }
 }
 
 .carousel {
-  @include breakpoint-up(tablet) {
+  @include breakpoint-up(laptop) {
     display: none;
   }
 }
@@ -27,12 +24,86 @@
 
 .legend {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.86);
   width: 100%;
-  // bottom: 130px;
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   color: $clr--txt--light;
   padding: $padding--mid;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-size: 1.5rem;
+  height: 100%;
+  transition: 0.3s ease;
+
+  span {
+    text-transform: capitalize;
+    font-weight: 200;
+    margin-top: $margin--min;
+
+    &:first-child {
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      padding: $padding--low;
+    }
+  }
+
+  @include breakpoint-up(laptop) {
+    font-size: 1rem;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @include breakpoint-up(laptop) {
+    width: 100%;
+    max-width: $max-width-desktop;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  @include breakpoint-up(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: toRem(250);
+  border-radius: $border--radius--low;
+  overflow: hidden;
+  box-shadow: $shadow--2;
+  background-color: $clr--contrast--primary;
+  height: toRem(400);
+
+  &:nth-child(2) {
+    margin: 0 $margin--mid;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .legend {
+      background-color: rgba(0, 0, 0, 0.78);
+      transform: scale(1.08);
+      // display: none;
+      // opacity: 0;
+      // background-color: none;
+    }
+  }
+}
+
+.cover {
+  max-width: 100%;
+  // width: toRem(250);
+  height: toRem(400);
+
+  // height: toRem(500);
 }
