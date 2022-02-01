@@ -12,3 +12,11 @@
     padding: 0;
   }
 }
+
+.status {
+  margin-top: $margin--mid;
+  padding: 0 $padding--mid;
+  @include breakpoint-up(laptop) {
+    padding: 0;
+  }
+}

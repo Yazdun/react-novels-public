@@ -13,8 +13,8 @@ export const NovelPreview = ({ novel }) => {
       <div className={s.cover}>
         <img src={image} alt={title} />
         <div className={s.like}>
-          {likes.length}
           <BsHeartFill />
+          {likes.length}
         </div>
       </div>
       <Heading capitalize small customclass={s.title}>
