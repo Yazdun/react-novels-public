@@ -3,11 +3,11 @@
 @import "../../scss/essentials";
 
 .spinner {
-  animation: rotate 2s linear infinite;
   z-index: 2;
   width: toRem(60);
   height: toRem(60);
   stroke: $clr--txt--primary;
+  animation: rotateFixed 2s linear infinite;
 
   & .path {
     stroke-linecap: round;
@@ -30,11 +30,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: rotateCenter 2s linear infinite;
 }
 
-@keyframes rotate {
+@keyframes rotateCenter {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes rotateFixed {
+  100% {
+    transform: rotate(360deg);
   }
 }
 

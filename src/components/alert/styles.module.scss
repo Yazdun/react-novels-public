@@ -1,0 +1,88 @@
+@import "../../scss/essentials";
+
+.alert {
+  color: black;
+  padding: toRem(20);
+  border-radius: $border--radius--low;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  justify-content: center;
+  max-width: toRem(400);
+  position: fixed;
+  bottom: toRem(70);
+  left: toRem(20);
+  right: toRem(20);
+  background-color: $clr--warn--primary;
+  z-index: $zindex--alert;
+  margin: auto;
+  font-weight: 600;
+  box-shadow: $shadow--3;
+  .icon {
+    font-size: 5rem;
+    margin-bottom: toRem(20);
+
+    animation: 1s ease-out 0s 1 bell;
+    animation-iteration-count: infinite;
+
+    animation-delay: 0.3s;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content {
+  margin-top: $margin--mid;
+  text-align: center;
+  line-height: 1.6rem;
+  font-weight: 400;
+  // text-transform: capitalize;
+}
+.show {
+  transition: 0.3s ease-in-out;
+}
+
+.hide {
+  // transform: transition(-150%);
+  bottom: toRem(-300);
+  transition: 0.3s ease-in-out;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  font-size: 1.5rem;
+  right: 15px;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+}
+
+@keyframes bell {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-30deg);
+  }
+  40% {
+    transform: rotate(25deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  80% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}

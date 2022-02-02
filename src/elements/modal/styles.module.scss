@@ -1,1 +1,114 @@
 @import "../../scss/essentials";
+
+.modal {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  z-index: $zindex--modal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: $border--radius;
+  max-width: toRem(500);
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  font-size: 1.3rem;
+  right: 15px;
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+}
+
+.background {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 150%;
+  left: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zindex--modal--background;
+  backdrop-filter: blur(0.27rem);
+}
+
+.showBackground {
+  animation: 0.7s apearBackground;
+}
+
+.hideBackground {
+  transform: scale(0);
+  animation: 0.7s disapearBackground;
+}
+
+.showModal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: 0.6s appearModal;
+}
+
+.hideModal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(0);
+  transition: 0.15s ease-in-out;
+}
+
+.children {
+  margin: $margin--mid 0;
+  padding: $padding--low;
+}
+
+.noneDisplay {
+  display: none;
+}
+
+@keyframes appearModal {
+  0% {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+  70% {
+    transform: translate(-50%, -50%) scaleY(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scaleY(1);
+  }
+}
+
+@keyframes apearBackground {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disapearBackground {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: $zindex--modal--background;
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: $zindex--modal--background;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+    z-index: $zindex--modal--background;
+  }
+}

@@ -63,18 +63,19 @@
   color: $clr--danger--primary;
   margin: auto;
   font-size: 2rem;
+
   svg {
     margin-right: $margin--min;
   }
 
   @include breakpoint-up(laptop) {
     position: absolute;
-    // left: 20px;
-    // bottom: 20px;
     left: 0;
     bottom: 0;
     padding: $padding--mid;
     background-color: $clr--bg--gradient;
     border-top-right-radius: $border--radius--low;
+    width: toRem(100);
+    height: toRem(90);
   }
 }

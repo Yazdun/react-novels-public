@@ -8,3 +8,4 @@ export { UserCard } from "./user";
 export { Logo } from "./logo";
 export { Rate } from "./rate";
 export { UserPopup } from "./user_popup";
+export { Alert } from "./alert";

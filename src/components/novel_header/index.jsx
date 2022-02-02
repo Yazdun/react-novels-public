@@ -3,9 +3,13 @@ import { Container, Heading } from "../../elements";
 import { AuthorPreview, Rate } from "..";
 import { useState } from "react";
 import { BsHeartFill } from "react-icons/bs";
+import { useNoticesContext, useAuthContext } from "../../context";
+import { usePatch } from "../../hooks";
+import { LIKE_NOVEL } from "../../services";
 
 export const NovelHeader = ({ novel }) => {
   const {
+    _id,
     image,
     title,
     authorInfo,
@@ -16,6 +20,14 @@ export const NovelHeader = ({ novel }) => {
     likes,
   } = novel;
   const [likesCount, setLikesCount] = useState(likes.length);
+  const isLoggedIn = useAuthContext();
+  const { showAlert } = useNoticesContext();
+
+  const handleLike = (data) => {
+    setLikesCount(data.likesCount);
+  };
+
+  const { patchRequest, patchLoading } = usePatch();
 
   return (
     <Container customclass={s.wrapper}>
@@ -34,7 +46,18 @@ export const NovelHeader = ({ novel }) => {
           </li>
         </ul>
         <Rate rate={rate} basedOnReviews={basedOnReviews} />
-        <button className={s.likes}>
+        <button
+          className={s.likes}
+          disabled={patchLoading}
+          onClick={() => {
+            isLoggedIn
+              ? patchRequest(LIKE_NOVEL(_id), {}, handleLike)
+              : showAlert(
+                  "authentication required",
+                  `In order to leave a like for ${title.toUpperCase()}, you must first login to your account or join us as a new member `
+                );
+          }}
+        >
           <BsHeartFill />
           {likesCount}
         </button>

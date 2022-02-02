@@ -16,10 +16,13 @@
   border-bottom: 10px solid $clr--bg--primary;
 
   @include breakpoint-up(tablet) {
+    // height: toRem(400);
     background-image: url("./backgrounds/tablet.svg");
   }
 
   @include breakpoint-up(laptop) {
+    height: toRem(400);
+
     border-radius: $border--radius--mid;
     background-image: url("./backgrounds/desktop.svg");
   }
