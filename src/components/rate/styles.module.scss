@@ -41,3 +41,33 @@
     background-image: url("./backgrounds/masterpiece.svg");
   }
 }
+
+.mini {
+  padding: toRem(5);
+  background-color: $clr--bg--transparent;
+  width: 100%;
+  max-width: toRem(110);
+  text-transform: uppercase;
+  margin: $margin--mid 0;
+  text-align: center;
+  border-radius: $border--radius--low;
+  &.awful {
+    color: $clr--danger--primary;
+  }
+  &.meh {
+    color: $clr--warn--primary;
+  }
+  &.good {
+    color: $clr--success--primary;
+  }
+  &.great {
+    color: $clr--success--secondary;
+  }
+  &.masterpiece {
+    background-color: $clr--success--secondary;
+    color: $clr--txt--light;
+  }
+  p {
+    display: none;
+  }
+}

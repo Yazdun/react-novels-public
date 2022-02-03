@@ -32,7 +32,7 @@ export const UserFormfields = [
       },
       pattern: {
         value: /^[a-zA-Z0-9_.-]*$/,
-        message: "cannot contain spaces",
+        message: "cannot contain symbols and space",
       },
     },
   },

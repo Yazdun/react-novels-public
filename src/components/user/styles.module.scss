@@ -1,1 +1,31 @@
 @import "../../scss/essentials";
+
+.image {
+  width: toRem(50);
+  height: toRem(50);
+  object-fit: cover;
+  border-radius: $border--radius--low;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+
+  ul {
+    margin-left: $margin--low;
+  }
+
+  ul li {
+    margin: $margin--min 0;
+  }
+}
+
+.username {
+  font-weight: 600;
+  color: $clr--txt--primary;
+}
+
+.time {
+  color: $clr--txt--secondary;
+  font-weight: 300;
+}

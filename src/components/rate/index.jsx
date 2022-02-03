@@ -2,11 +2,11 @@ import s from "./styles.module.scss";
 import classnames from "classnames";
 import { Container } from "../../elements";
 
-export const Rate = ({ rate, basedOnReviews }) => {
+export const Rate = ({ rate, basedOnReviews, mini }) => {
   switch (rate) {
     case 1:
       return (
-        <div className={classnames(s.big, s.awful)}>
+        <div className={classnames(mini ? s.mini : s.big, s.awful)}>
           <h5 className={s.rate}>awful</h5>
           <p className={s.based}>
             based on {basedOnReviews}{" "}
@@ -17,7 +17,7 @@ export const Rate = ({ rate, basedOnReviews }) => {
 
     case 2:
       return (
-        <div className={classnames(s.big, s.meh)}>
+        <div className={classnames(mini ? s.mini : s.big, s.meh)}>
           <h5 className={s.rate}>meh !</h5>
           <p className={s.based}>
             {" "}
@@ -29,7 +29,7 @@ export const Rate = ({ rate, basedOnReviews }) => {
 
     case 3:
       return (
-        <div className={classnames(s.big, s.good)}>
+        <div className={classnames(mini ? s.mini : s.big, s.good)}>
           <h5 className={s.rate}>good</h5>
           <p className={s.based}>
             {" "}
@@ -41,7 +41,7 @@ export const Rate = ({ rate, basedOnReviews }) => {
 
     case 4:
       return (
-        <div className={classnames(s.big, s.great)}>
+        <div className={classnames(mini ? s.mini : s.big, s.great)}>
           <h5 className={s.rate}>great</h5>
           <p className={s.based}>
             {" "}
@@ -53,7 +53,7 @@ export const Rate = ({ rate, basedOnReviews }) => {
 
     case 5:
       return (
-        <div className={classnames(s.big, s.masterpiece)}>
+        <div className={classnames(mini ? s.mini : s.big, s.masterpiece)}>
           <h5 className={s.rate}>masterpiece</h5>
           <p className={s.based}>
             {" "}
@@ -65,7 +65,7 @@ export const Rate = ({ rate, basedOnReviews }) => {
 
     default:
       return (
-        <div className={classnames(s.big, s.na)}>
+        <div className={classnames(mini ? s.mini : s.big, s.na)}>
           <h5 className={s.rate}>N/A</h5>
         </div>
       );

@@ -7,3 +7,24 @@
     padding: $padding--mid 0;
   }
 }
+
+.card {
+  padding: $padding--mid 0;
+  border-bottom: 2px solid $clr--border--transparent;
+
+  @include breakpoint-up(laptop) {
+    padding: $padding--mid;
+    border: none;
+    box-shadow: $shadow--4;
+    margin-top: $margin--mid;
+    transition: 0.3s ease;
+  }
+}
+
+.header {
+  @include breakpoint-up(laptop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
