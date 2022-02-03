@@ -5,6 +5,8 @@ import { Logo } from "../";
 import { useAuthContext } from "../../context";
 import { Link } from "react-router-dom";
 import { UserPopup } from "../user_popup";
+import classnames from "classnames";
+import { useNoticesContext } from "../../context";
 
 export const Navigation = () => {
   const isLoggedIn = useAuthContext();
@@ -18,9 +20,17 @@ export const Navigation = () => {
 };
 
 const User = () => {
+  const { isNotif } = useNoticesContext();
+
   return (
     <div className={s.user}>
       <Link to="/notifications">
+        {isNotif && (
+          <>
+            <div className={s.notification}></div>
+            <div className={classnames(s.notification, s.animate)}></div>
+          </>
+        )}
         <RiNotification3Line />
       </Link>
       <UserPopup />

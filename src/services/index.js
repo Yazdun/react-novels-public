@@ -10,3 +10,5 @@ export const LIKE_NOVEL = (id) => `/protected/status/novel/like/${id}`;
 
 export const CREATE_REVIEW = (id) => `/protected/review/create/${id}`;
 export const GET_NOVEL_REVIEWS = (id) => `/public/review/novel/${id}`;
+
+export const IS_NOTIF = "/protected/notification/isNotif";

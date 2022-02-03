@@ -23,7 +23,7 @@ export const WriteReview = ({ novelId, novelTitle }) => {
     setRate(3);
     showAlert(
       "review is submitted",
-      `You have successfully submitted a review on ${novelTitle.toUpperCase()}. Your review will be inspected by administrators and you will be notified about your review's approval within the next few hours, `
+      `You have successfully submitted a review on ${novelTitle.toUpperCase()}. Your review will be inspected by administrators and you will be notified about your review's approval within the next few hours. `
     );
   };
 

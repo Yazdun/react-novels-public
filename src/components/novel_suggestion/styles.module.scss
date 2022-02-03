@@ -14,7 +14,7 @@
   padding-top: $padding--mid;
 
   @include breakpoint-up(laptop) {
-    padding: $padding--high $padding--mid;
+    padding: $padding--mid;
   }
 }
 .text {

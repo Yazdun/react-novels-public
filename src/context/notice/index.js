@@ -1,12 +1,18 @@
 import React, { useState, createContext, useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
+import { useGet } from "../../hooks";
+import { IS_NOTIF } from "../../services";
 
 export const NoticesProviderContext = createContext();
 
 export const NoticesProvider = ({ children }) => {
   const history = useHistory();
+  const { getRequest } = useGet();
 
   const [isNotif, setIsNotif] = useState(false);
+
+  const handleNotif = (data) => setIsNotif(data.isNotif);
+  const seenNotif = () => setIsNotif(false);
 
   const [alert, setAlert] = useState({
     show: false,
@@ -31,8 +37,14 @@ export const NoticesProvider = ({ children }) => {
     return unlisten;
   }, []);
 
+  useEffect(() => {
+    getRequest(IS_NOTIF, handleNotif);
+  }, []);
+
   return (
-    <NoticesProviderContext.Provider value={{ alert, hideAlert, showAlert }}>
+    <NoticesProviderContext.Provider
+      value={{ alert, hideAlert, showAlert, isNotif, seenNotif }}
+    >
       {children}
     </NoticesProviderContext.Provider>
   );

@@ -25,7 +25,7 @@ export const NovelReviews = () => {
   if (reviews.length < 1) {
     return (
       <div className={s.reviews}>
-        <Text bold customclass={s.text}>
+        <Text center bold customclass={s.text}>
           Be the first one to review this novel 👏
         </Text>
       </div>
@@ -36,10 +36,10 @@ export const NovelReviews = () => {
       <Text bold customclass={s.text}>
         What people think about this novel 👇
       </Text>
-      {reviews.map((review) => {
+      {reviews.map((review, index) => {
         const { content, createdBy, createdAt, rate } = review;
         return (
-          <div className={s.card}>
+          <div className={s.card} key={index}>
             <div className={s.header}>
               <UserCard userInfo={createdBy} time={createdAt} />
               <Rate rate={rate} mini />

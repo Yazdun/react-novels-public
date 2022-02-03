@@ -32,6 +32,22 @@
 
   a {
     display: flex;
+    position: relative;
+
+    .notification {
+      width: toRem(10);
+      height: toRem(10);
+      background-color: $clr--danger--primary;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      left: 9px;
+    }
+
+    .animate {
+      animation: 2.3s scale infinite;
+      opacity: 0.6;
+    }
   }
 
   button {
@@ -40,5 +56,18 @@
 
   svg {
     margin-left: $margin--low;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
   }
 }
