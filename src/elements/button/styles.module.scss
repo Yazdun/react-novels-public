@@ -1,7 +1,7 @@
 @import "../../scss/essentials";
 
 .btn {
-  padding: $padding--low;
+  padding: toRem(15) $padding--mid;
   background-color: $clr--contrast--primary;
   color: $clr--txt--light;
   border-radius: $border--radius--min;

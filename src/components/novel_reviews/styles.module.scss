@@ -1,0 +1,9 @@
+@import "../../scss/essentials";
+
+.reviews {
+  padding: $padding--mid;
+
+  @include breakpoint-up(laptop) {
+    padding: $padding--mid 0;
+  }
+}

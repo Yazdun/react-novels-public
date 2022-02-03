@@ -7,7 +7,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useState } from "react/cjs/react.development";
 import { GET_RELATED_NOVELS } from "../../services";
-import { Heading, Loading, Text } from "../../elements";
+import { Container, Heading, Loading, Text } from "../../elements";
 import { Link } from "react-router-dom";
 
 export const NovelSuggestion = () => {
@@ -27,56 +27,58 @@ export const NovelSuggestion = () => {
   }, [id]);
 
   if (getLoading) {
-    return <Loading height={500} />;
+    return <Loading height={491} />;
   }
   return (
     <div className={s.wrapper}>
-      <Text bold customclass={s.text}>
-        You may also be interested in 👇
-      </Text>
+      <Container customclass={s.container}>
+        <Text bold customclass={s.text}>
+          You may also be interested in 👇
+        </Text>
 
-      <Carousel
-        showThumbs={false}
-        className={s.carousel}
-        centerMode
-        centerSlidePercentage={90}
-        onClickItem={(index, item) => history.push(`/novel/${item.key}`)}
-      >
-        {novels.map((novel) => {
-          return (
-            <div key={novel._id}>
-              <img src={novel.image} className={s.image} />
-              <Text bold customclass={s.legend}>
-                {novel.title}
+        <Carousel
+          showThumbs={false}
+          className={s.carousel}
+          centerMode
+          centerSlidePercentage={90}
+          onClickItem={(index, item) => history.push(`/novel/${item.key}`)}
+        >
+          {novels.map((novel) => {
+            return (
+              <div key={novel._id}>
+                <img src={novel.image} className={s.image} />
+                <Text bold customclass={s.legend}>
+                  {novel.title}
 
-                <span>{novel.author}</span>
-                <span>~ {novel.publish}</span>
-              </Text>
-            </div>
-          );
-        })}
-      </Carousel>
-      <div className={s.desktop}>
-        {novels.map((novel) => {
-          return (
-            <div
-              className={s.card}
-              key={novel._id}
-              onClick={() => {
-                history.push(`/novel/${novel._id}`);
-              }}
-            >
-              <img src={novel.image} className={s.cover} />
-              <Text center bold customclass={s.legend}>
-                {novel.title}
+                  <span>{novel.author}</span>
+                  <span>~ {novel.publish}</span>
+                </Text>
+              </div>
+            );
+          })}
+        </Carousel>
+        <div className={s.desktop}>
+          {novels.map((novel) => {
+            return (
+              <div
+                className={s.card}
+                key={novel._id}
+                onClick={() => {
+                  history.push(`/novel/${novel._id}`);
+                }}
+              >
+                <img src={novel.image} className={s.cover} />
+                <Text center bold customclass={s.legend}>
+                  {novel.title}
 
-                <span>{novel.author}</span>
-                <span>~ {novel.publish}</span>
-              </Text>
-            </div>
-          );
-        })}
-      </div>
+                  <span>{novel.author}</span>
+                  <span>~ {novel.publish}</span>
+                </Text>
+              </div>
+            );
+          })}
+        </div>
+      </Container>
     </div>
   );
 };

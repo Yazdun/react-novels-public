@@ -1,10 +1,24 @@
 @import "../../scss/essentials";
+
 .wrapper {
-  padding: $padding--mid 0;
+  border-top: 2px solid $clr--border--transparent;
+  background-color: $clr--bg--primary;
+
+  @include breakpoint-up(laptop) {
+    // padding: $padding--mid;
+    background-color: $clr--bg--transparent;
+    border: none;
+  }
+}
+.container {
+  padding-top: $padding--mid;
+
+  @include breakpoint-up(laptop) {
+    padding: $padding--high $padding--mid;
+  }
 }
 .text {
   padding: 0 $padding--mid $padding--mid $padding--mid;
-  font-weight: 700;
 
   @include breakpoint-up(laptop) {
     padding: 0 0 $padding--mid 0;

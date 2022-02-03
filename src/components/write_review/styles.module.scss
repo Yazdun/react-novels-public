@@ -1,0 +1,43 @@
+@import "../../scss/essentials";
+
+.noAuth {
+  display: flex;
+  align-items: center;
+  padding: $padding--mid;
+  justify-content: center;
+  //   font-weight: 500;
+
+  svg {
+    font-size: 2rem;
+    margin-right: $margin--low;
+  }
+
+  a {
+    font-weight: 700;
+    margin: 0 $margin--min;
+  }
+}
+
+.form {
+  padding: $padding--mid;
+
+  @include breakpoint-up(laptop) {
+    padding: $padding--mid 0;
+  }
+}
+
+.formfield {
+  margin: 0;
+}
+.options {
+  //   background-color: red;
+  margin-top: $margin--mid;
+  @include breakpoint-up(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  @include breakpoint-up(laptop) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

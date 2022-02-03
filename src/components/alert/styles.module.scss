@@ -43,13 +43,12 @@
   // text-transform: capitalize;
 }
 .show {
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .hide {
-  // transform: transition(-150%);
-  bottom: toRem(-300);
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
+  bottom: toRem(-400);
 }
 
 .close {

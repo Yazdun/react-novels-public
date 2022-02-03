@@ -1,12 +1,16 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
 import { Container, Heading, RenderText, Spinner, Text } from "../../elements";
-import { NovelHeader, NovelSuggestion } from "../../components";
+import {
+  NovelHeader,
+  NovelReviews,
+  NovelSuggestion,
+  WriteReview,
+} from "../../components";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useGet } from "../../hooks";
 import { GET_SINGLE_NOVEL } from "../../services";
-import ReactTimeAgo from "react-time-ago";
 
 export const Novel = () => {
   const { id } = useParams();
@@ -23,18 +27,22 @@ export const Novel = () => {
     return <Spinner center />;
   }
   return (
-    <Container customclass={s.wrapper}>
-      <NovelHeader novel={novel} />
-
-      <div className={s.rendertext}>
-        <RenderText
-          content={novel.description.split("\n")}
-          customclass={s.rendertext}
-        />
-      </div>
-
-      <hr className="hr" />
+    <>
+      <Container customclass={s.wrapper}>
+        <NovelHeader novel={novel} />
+        <div className={s.rendertext}>
+          <RenderText
+            content={novel.description.split("\n")}
+            customclass={s.rendertext}
+          />
+        </div>
+      </Container>
       <NovelSuggestion />
-    </Container>
+      <Container customclass={s.wrapper}>
+        <WriteReview novelId={id} novelTitle={novel.title} />
+        <hr className="hr" />
+        <NovelReviews />
+      </Container>
+    </>
   );
 };

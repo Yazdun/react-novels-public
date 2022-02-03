@@ -11,7 +11,7 @@
   height: toRem(100);
   background-image: url("./backgrounds/mobile.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: toRem(570);
   border-bottom: 10px solid $clr--bg--primary;
 
@@ -33,6 +33,10 @@
   padding-top: toRem(100);
   margin: 0;
   animation: 3s title;
+
+  @include breakpoint-up(laptop) {
+    padding-top: toRem(70);
+  }
 }
 
 @keyframes title {
