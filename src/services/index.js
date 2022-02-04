@@ -12,3 +12,4 @@ export const CREATE_REVIEW = (id) => `/protected/review/create/${id}`;
 export const GET_NOVEL_REVIEWS = (id) => `/public/review/novel/${id}`;
 
 export const IS_NOTIF = "/protected/notification/isNotif";
+export const GET_ALL_NOTIFS = "/protected/notification/";

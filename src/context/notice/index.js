@@ -2,11 +2,13 @@ import React, { useState, createContext, useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { useGet } from "../../hooks";
 import { IS_NOTIF } from "../../services";
+import { useAuthContext } from "..";
 
 export const NoticesProviderContext = createContext();
 
 export const NoticesProvider = ({ children }) => {
   const history = useHistory();
+  const isLoggedIn = useAuthContext();
   const { getRequest } = useGet();
 
   const [isNotif, setIsNotif] = useState(false);
@@ -32,13 +34,10 @@ export const NoticesProvider = ({ children }) => {
     // Listen for changes to the current location.
     const unlisten = history.listen(() => {
       hideAlert();
+      if (isLoggedIn) getRequest(IS_NOTIF, handleNotif);
     });
     // cleanup the listener on unmount
     return unlisten;
-  }, []);
-
-  useEffect(() => {
-    getRequest(IS_NOTIF, handleNotif);
   }, []);
 
   return (

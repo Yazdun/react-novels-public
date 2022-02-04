@@ -1,6 +1,59 @@
 @import "../../scss/essentials";
 
-.loading {
-  width: 200px;
-  height: 200px;
+.card {
+  padding: $padding--mid;
+  box-shadow: $shadow--4;
+  margin-bottom: $margin--mid;
+  border-radius: $border--radius--low;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: $shadow--2;
+  }
+}
+
+.text {
+  span a {
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+
+.image {
+  height: toRem(60);
+  width: toRem(40);
+  object-fit: cover;
+  border-radius: $border--radius--low;
+  margin-right: $margin--mid;
+  align-self: flex-start;
+}
+
+.unseen {
+  border-left: 4px solid $clr--active--primary;
+}
+
+.icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.fail {
+  color: $clr--danger--primary;
+}
+
+.illustration {
+  width: 100%;
+  max-width: toRem(200);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: 2s scaleBigToNormal;
 }
