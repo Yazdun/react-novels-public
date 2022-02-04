@@ -41,7 +41,7 @@ export const ErrorHandler = ({ children }) => {
         return (
           <Error
             title="404 ! Not found ..."
-            message="this content either doesn't exist or has been deleted"
+            info="this content either doesn't exist or has been deleted"
             action
           />
         );
@@ -50,7 +50,7 @@ export const ErrorHandler = ({ children }) => {
         return (
           <Error
             title="500 ! Our fault ..."
-            message="there is a problem within our servers, we are looking into it ..."
+            info="there is a problem within our servers, we are looking into it ..."
             action
           />
         );
