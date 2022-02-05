@@ -15,8 +15,6 @@ export const Home = () => {
 
   useEffect(() => {
     getRequest(GET_ALL_NOVELS, handleNovels);
-
-    // return getRequest;
   }, []);
 
   return (

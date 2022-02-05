@@ -1,0 +1,72 @@
+@import "../../scss/essentials";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  ul {
+    text-transform: capitalize;
+    width: 100%;
+    border: 1px solid $clr--border--transparent;
+    box-shadow: $shadow--1;
+    border-radius: $border--radius--low;
+    padding: $padding--mid;
+  }
+
+  ul li {
+    padding: $padding--min 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul li span {
+    font-weight: 600;
+  }
+
+  @include breakpoint-up(tablet) {
+    max-width: toRem(280);
+    margin: auto;
+  }
+
+  @include breakpoint-up(laptop) {
+    margin: 0;
+    position: sticky;
+    top: 40px;
+    margin-bottom: $margin--mid;
+  }
+}
+
+.image {
+  width: toRem(200);
+  height: toRem(200);
+  border-radius: 50%;
+  object-fit: cover;
+  outline: 5px solid $clr--warn--primary;
+  margin-bottom: $padding--low;
+  border: 1px solid $clr--warn--primary;
+  box-shadow: $shadow--2;
+}
+
+.header {
+  position: relative;
+}
+
+.star {
+  padding: $padding--low;
+  border-radius: $border--radius--low;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: $clr--warn--primary;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.5rem;
+
+  svg {
+    margin-right: $margin--min;
+  }
+}

@@ -1,1 +1,26 @@
 @import "../../scss/essentials";
+
+.info {
+  @include breakpoint-up(laptop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.text {
+  width: 100%;
+  max-width: toRem(650);
+
+  @include breakpoint-up(laptop) {
+    margin-left: $margin--high;
+  }
+}
+
+.header {
+  font-size: 1.2rem;
+  margin-top: $margin--high;
+  @include breakpoint-up(laptop) {
+    margin: 0;
+  }
+}

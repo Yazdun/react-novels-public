@@ -1,4 +1,5 @@
 export { AuthorPreview } from "./author_preview";
+export { AuthorInfo } from "./author_info";
 export { Navigation } from "./navigation";
 export { NovelPreview, RenderNovelPreviews } from "./novel_preview";
 export { NovelSuggestion } from "./novel_suggestion";

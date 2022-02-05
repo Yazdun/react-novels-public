@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useNoticesContext } from "../../context";
 import { MdNearbyError } from "react-icons/md";
 import { BsCheckAll } from "react-icons/bs";
-import { megaphone } from "../../assets";
+import { man__1 } from "../../assets";
 
 export const Notification = () => {
   const { getRequest, getLoading } = useGet();
@@ -33,12 +33,12 @@ export const Notification = () => {
     return (
       <Container padding customclass={s.wrapper}>
         <img
-          src={megaphone}
+          src={man__1}
           className={s.illustration}
           alt="a man holding his phone and looking at you !"
         />
         <Heading medium center uppercase>
-          no notifications
+          no notifications !
         </Heading>
       </Container>
     );

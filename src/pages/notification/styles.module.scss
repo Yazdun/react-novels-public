@@ -48,7 +48,7 @@
 
 .illustration {
   width: 100%;
-  max-width: toRem(200);
+  max-width: toRem(300);
 }
 
 .wrapper {
@@ -56,4 +56,5 @@
   flex-direction: column;
   align-items: center;
   animation: 2s scaleBigToNormal;
+  text-align: center;
 }
