@@ -16,3 +16,4 @@ export { DashboardHeader } from "./dashboard_header";
 export { DashboardLikes } from "./dashboard_likes";
 export { DashboardReviews } from "./dashboard_reviews";
 export { DashboardStars } from "./dashboard_stars";
+export { DashboardWidgets } from "./dashboard_widgets";

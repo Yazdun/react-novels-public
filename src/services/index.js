@@ -17,3 +17,5 @@ export const GET_ALL_NOTIFS = "/protected/notification/";
 
 export const GET_AUTHOR = (id) => `/public/author/find/${id}`;
 export const GET_AUTHOR_NOVELS = (id) => `/public/author/novels/${id}`;
+
+export const GET_CURRENT_USER = "/protected/user/";

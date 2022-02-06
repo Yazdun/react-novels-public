@@ -1,1 +1,54 @@
 @import "../../scss/essentials";
+
+.wrapper {
+  @include breakpoint-up(laptop) {
+    padding: 0 $padding--mid;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: $padding--low $padding--mid;
+  font-weight: 600;
+  box-shadow: $shadow--2;
+  font-size: 1.5rem;
+  transition: 0.3s;
+
+  @include breakpoint-up(tablet) {
+    padding: $padding--mid;
+    width: 100%;
+    max-width: toRem(500);
+    border: 1px solid $clr--border--transparent;
+    border-radius: $border--radius--low;
+    margin: $margin--mid auto;
+    font-size: 1rem;
+
+    &:hover {
+      box-shadow: $shadow--4;
+    }
+  }
+}
+
+.active {
+  color: $clr--active--primary !important;
+}
+
+.linkContent {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  @include breakpoint-up(tablet) {
+    display: none;
+  }
+}
+
+.title {
+  display: none;
+  @include breakpoint-up(tablet) {
+    display: block;
+  }
+}

@@ -1,28 +1,59 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
-import { Container } from "../../elements";
-import { DashboardHeader } from "../../components";
-import { Link, Route, Switch } from "react-router-dom";
+import { Container, Spinner } from "../../elements";
+import { DashboardHeader, DashboardWidgets } from "../../components";
+import { Link, Route } from "react-router-dom";
 import { useRouteMatch } from "react-router-dom";
 import {
   DashboardLikes,
   DashboardReviews,
   DashboardStars,
 } from "../../components";
-import { PrivateRoute } from "../../routes";
+import { useGet } from "../../hooks";
+import { useEffect, useState } from "react";
+import { GET_USER_INFO } from "../../services";
+import { useLocation } from "react-router-dom";
+import { links } from "./links";
 
 export const Dashboard = () => {
-  const { url, path } = useRouteMatch();
+  const { path } = useRouteMatch();
+  const location = useLocation();
+
+  const { getRequest, getLoading } = useGet();
+  const [user, setUser] = useState({ username: "", email: "", image: "" });
+  const handleUser = (data) => setUser(data.user);
+  useEffect(() => {
+    getRequest(GET_USER_INFO, handleUser);
+  }, []);
+
+  if (getLoading) {
+    return <Spinner center />;
+  }
 
   return (
-    <Container padding>
-      <DashboardHeader />
-      <Link to={`${path}/likes`}>likes</Link> /
-      <Link to={`${path}/reviews`}>reviews</Link> /
-      <Link to={`${path}/stars`}>stars</Link> /
-      <PrivateRoute component={DashboardLikes} path={`${path}/likes`} />
-      <PrivateRoute component={DashboardReviews} path={`${path}/reviews`} />
-      <PrivateRoute component={DashboardStars} path={`${path}/stars`} />
+    <Container customclass={s.wrapper}>
+      <DashboardHeader user={user} />
+      <div className={s.links}>
+        {links.map((link) => {
+          const { title, icon, url, to } = link;
+          return (
+            <Link
+              className={classnames(
+                s.link,
+                location.pathname === url && s.active
+              )}
+              to={`${path}/${to}`}
+            >
+              <div className={s.icon}>{icon}</div>
+              <p className={s.title}>{title}</p>
+            </Link>
+          );
+        })}
+      </div>
+      <Route component={DashboardWidgets} path={`${path}/`} exact />
+      <Route component={DashboardLikes} path={`${path}/likes`} />
+      <Route component={DashboardReviews} path={`${path}/reviews`} />
+      <Route component={DashboardStars} path={`${path}/stars`} />
     </Container>
   );
 };

@@ -1,1 +1,70 @@
 @import "../../scss/essentials";
+
+.header {
+  width: 100%;
+  background-image: url("./backgrounds/mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $clr--txt--light;
+  padding: $padding--high $padding--min;
+
+  @include breakpoint-up(laptop) {
+    border-radius: $border--radius--low;
+    flex-direction: row;
+  }
+}
+
+.image {
+  width: toRem(150);
+  height: toRem(150);
+  border-radius: 50%;
+  object-fit: cover;
+  outline: 10px solid $clr--bg--gradient;
+}
+
+.heading {
+  margin: $margin--low 0;
+}
+
+.info {
+  text-align: center;
+  padding: $padding--low $padding--mid;
+  background-color: $clr--bg--gradient;
+  border-radius: $border--radius--low;
+  margin-top: $margin--mid;
+
+  li {
+    margin: $margin--low 0;
+    display: flex;
+    align-items: center;
+  }
+
+  li svg {
+    margin-right: $margin--min;
+  }
+  @include breakpoint-up(laptop) {
+    margin-left: $margin--mid;
+    text-align: left;
+    margin-top: 0;
+  }
+}
+
+.settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: $padding--low;
+  background-color: $clr--bg--gradient;
+  font-size: 2.5rem;
+  width: toRem(50);
+  height: toRem(50);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: $border--radius--low;
+}
