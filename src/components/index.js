@@ -12,3 +12,7 @@ export { UserPopup } from "./user_popup";
 export { Alert } from "./alert";
 export { WriteReview } from "./write_review";
 export { NovelReviews } from "./novel_reviews";
+export { DashboardHeader } from "./dashboard_header";
+export { DashboardLikes } from "./dashboard_likes";
+export { DashboardReviews } from "./dashboard_reviews";
+export { DashboardStars } from "./dashboard_stars";

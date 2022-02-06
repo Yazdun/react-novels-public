@@ -1,7 +1,6 @@
 import {
   Author,
   Dashboard,
-  Error,
   Home,
   Join,
   Login,
@@ -48,7 +47,6 @@ export const AppRoutes = [
     private: true,
   },
   {
-    exact: true,
     path: "/dashboard",
     component: Dashboard,
     private: true,
