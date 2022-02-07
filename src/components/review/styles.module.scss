@@ -13,9 +13,10 @@
 .review {
   padding: $padding--mid;
   border: 1px solid $clr--border--transparent;
-  box-shadow: $shadow--1;
+  box-shadow: $shadow--4;
   margin: $margin--mid 0;
   transition: 0.3s ease;
+  position: relative;
 
   @include breakpoint-up(laptop) {
     border-radius: $border--radius--low;
@@ -28,9 +29,64 @@
 
   .btn {
     margin-left: $margin--low;
+    background-color: transparent;
+    border: 1px solid $clr--contrast--primary;
+    color: $clr--txt--primary;
+  }
+
+  @include breakpoint-up(tablet) {
+    justify-content: flex-start;
   }
 }
 
 .deleted {
   display: none;
+}
+
+.cancel {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  svg {
+    margin-right: $margin--min;
+  }
+}
+
+.options {
+  //   background-color: red;
+  margin-top: $margin--mid;
+  @include breakpoint-up(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  @include breakpoint-up(laptop) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.status {
+  width: toRem(110);
+  padding: toRem(5);
+  font-size: 0.8rem;
+
+  background-color: $clr--bg--primary;
+  border: 1px solid $clr--contrast--primary;
+  border-radius: $border--radius--low;
+  text-align: center;
+  // color: $clr--txt--light;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.isApproved {
+  border: 1px solid $clr--success--secondary;
+  color: $clr--success--secondary;
+}
+
+.isDisapproved {
+  border: 1px solid $clr--danger--secondary;
+  color: $clr--danger--secondary;
 }

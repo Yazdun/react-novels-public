@@ -45,10 +45,10 @@
 .mini {
   padding: toRem(5);
   background-color: $clr--bg--transparent;
-  width: 100%;
-  max-width: toRem(110);
+  // width: 100%;
+  width: toRem(110);
   text-transform: uppercase;
-  margin: $margin--mid 0;
+  margin: $margin--low 0;
   text-align: center;
   border-radius: $border--radius--low;
   &.awful {
@@ -58,7 +58,7 @@
     color: $clr--warn--primary;
   }
   &.good {
-    color: $clr--success--primary;
+    color: $clr--active--primary;
   }
   &.great {
     color: $clr--success--secondary;

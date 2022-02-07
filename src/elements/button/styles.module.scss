@@ -37,14 +37,17 @@
 
 .active {
   background-color: $clr--active--primary;
+  border: 1px solid $clr--active--primary;
 }
 
 .danger {
   background-color: $clr--danger--primary;
+  border: 1px solid $clr--danger--primary;
 }
 
 .success {
   background-color: $clr--success--primary;
+  border: 1px solid $clr--success--primary;
 }
 
 .center {

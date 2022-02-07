@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { BsHeartFill, BsStarFill } from "react-icons/bs";
 import { FaFeather } from "react-icons/fa";
-import { Heading, Loading, Spinner } from "../../elements";
+import { Heading, Spinner } from "../../elements";
 import { useGet } from "../../hooks";
 import { GET_USER_STATS } from "../../services";
 import s from "./styles.module.scss";
