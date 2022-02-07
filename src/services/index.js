@@ -17,6 +17,7 @@ export const LIKE_NOVEL = (id) => `/protected/status/novel/like/${id}`;
 export const STAR_AUTHOR = (id) => `/protected/status/author/star/${id}`;
 // PROTECTED REVIEWS
 export const CREATE_REVIEW = (id) => `/protected/review/create/${id}`;
+export const DELETE_REVIEW = (id) => `/protected/review/delete/${id}`;
 // PUBLIC REVIEWS
 export const GET_NOVEL_REVIEWS = (id) => `/public/review/novel/${id}`;
 // NOTIFICATION

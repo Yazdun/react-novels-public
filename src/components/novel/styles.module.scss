@@ -1,0 +1,27 @@
+@import "../../scss/essentials";
+
+.novel {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: toRem(50);
+  height: toRem(70);
+  object-fit: cover;
+  border-radius: $border--radius--low;
+}
+
+.info {
+  margin-left: $margin--low;
+  text-transform: capitalize;
+
+  li {
+    margin: $margin--min 0;
+  }
+}
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+}

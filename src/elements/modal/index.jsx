@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { useState } from "react";
-import { Button } from "../../ui";
+import { Button } from "..";
 import s from "./styles.module.scss";
 import { GrClose } from "react-icons/gr";
 

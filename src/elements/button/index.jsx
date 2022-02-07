@@ -13,9 +13,11 @@ export const Button = ({
   fullwidth,
   fixedwidth,
   customclass,
+  onClick,
 }) => {
   return (
     <button
+      onClick={onClick}
       className={classnames(
         s.btn,
         text,

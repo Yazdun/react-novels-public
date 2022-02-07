@@ -1,4 +1,5 @@
 export { Container } from "./container";
+export { Modal } from "./modal";
 export { Button } from "./button";
 export { Formfield } from "./formfield";
 export { RenderFormfields } from "./render_formfields";

@@ -1,1 +1,36 @@
 @import "../../scss/essentials";
+
+.novel {
+  //   border-bottom: 1px solid $clr--border--transparent;
+  @include breakpoint-up(tablet) {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+  }
+}
+
+.review {
+  padding: $padding--mid;
+  border: 1px solid $clr--border--transparent;
+  box-shadow: $shadow--1;
+  margin: $margin--mid 0;
+  transition: 0.3s ease;
+
+  @include breakpoint-up(laptop) {
+    border-radius: $border--radius--low;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+
+  .btn {
+    margin-left: $margin--low;
+  }
+}
+
+.deleted {
+  display: none;
+}
