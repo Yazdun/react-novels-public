@@ -52,7 +52,7 @@ export const UserPopup = () => {
             <img className={s.image} src={placeholder} alt="" />
           </div>
           <div className={s.actions}>
-            <Link to="/dashboard">
+            <Link to="/dashboard/">
               <button className={s.btn} onClick={() => setShow(false)}>
                 dashboard
                 <BsMenuUp />
