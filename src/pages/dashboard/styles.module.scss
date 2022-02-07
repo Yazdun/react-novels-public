@@ -21,6 +21,7 @@
   position: sticky;
   top: 0;
   background-color: $clr--bg--primary;
+  z-index: 3;
 
   @include breakpoint-up(tablet) {
     padding: $padding--mid;

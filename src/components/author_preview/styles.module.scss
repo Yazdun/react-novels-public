@@ -11,7 +11,7 @@
 .author {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: $padding--low;
   border-radius: $border--radius--low;
   margin: $margin--mid 0;
@@ -24,10 +24,14 @@
 .transparent {
   background-color: $clr--bg--gradient;
   border: none;
-}
 
-.name {
-  color: $clr--txt--light;
+  .name {
+    color: $clr--txt--light;
+  }
+
+  &.author {
+    justify-content: center;
+  }
 }
 
 .info {

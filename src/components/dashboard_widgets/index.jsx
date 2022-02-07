@@ -1,6 +1,8 @@
+import classNames from "classnames";
 import { useEffect, useState } from "react";
-import { heart__1, pen__1, placeholder, star__1 } from "../../assets";
-import { Loading } from "../../elements";
+import { BsHeartFill, BsStarFill } from "react-icons/bs";
+import { FaFeather } from "react-icons/fa";
+import { Heading, Loading, Spinner } from "../../elements";
 import { useGet } from "../../hooks";
 import { GET_USER_STATS } from "../../services";
 import s from "./styles.module.scss";
@@ -22,28 +24,33 @@ export const DashboardWidgets = () => {
   }, []);
 
   if (getLoading) {
-    return <Loading height={300} />;
+    return (
+      <Heading small center uppercase>
+        <Spinner small />
+        loading ...
+      </Heading>
+    );
   }
   return (
     <div className={s.wrapper}>
-      <div className={s.widget}>
-        <img src={pen__1} alt="pen" className={s.image} />
+      <div className={classNames(s.widget, s.review)}>
+        <FaFeather />
         <p>
           {countReviews === 0
             ? "no reviews"
             : `${countReviews} review${countReviews > 1 ? "s" : ""}`}
         </p>
       </div>
-      <div className={s.widget}>
-        <img src={heart__1} alt="heart" className={s.image} />
+      <div className={classNames(s.widget, s.like)}>
+        <BsHeartFill />
         <p>
           {countLikes === 0
             ? "no likes"
             : `${countLikes} like${countLikes > 1 ? "s" : ""}`}
         </p>
       </div>
-      <div className={s.widget}>
-        <img src={star__1} alt="star" className={s.image} />
+      <div className={classNames(s.widget, s.star)}>
+        <BsStarFill />
         <p>
           {countStars === 0
             ? "no stars"

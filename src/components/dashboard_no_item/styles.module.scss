@@ -1,21 +1,6 @@
 @import "../../scss/essentials";
 
-.wrapper {
-  padding: 0 $padding--mid;
-
-  @include breakpoint-up(tablet) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-  }
-
-  @include breakpoint-up(laptop) {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0;
-  }
-}
-
-.noAuthor {
+.noItem {
   width: 100%;
   max-width: toRem(500);
   border-radius: $border--radius--low;
