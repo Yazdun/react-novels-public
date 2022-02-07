@@ -28,15 +28,27 @@ export const DashboardWidgets = () => {
     <div className={s.wrapper}>
       <div className={s.widget}>
         <img src={pen__1} alt="pen" className={s.image} />
-        <p>{countReviews === 0 ? "no" : countReviews} reviews</p>
+        <p>
+          {countReviews === 0
+            ? "no reviews"
+            : `${countReviews} review${countReviews > 1 ? "s" : ""}`}
+        </p>
       </div>
       <div className={s.widget}>
         <img src={heart__1} alt="heart" className={s.image} />
-        <p>{countLikes === 0 ? "no" : countLikes} likes</p>
+        <p>
+          {countLikes === 0
+            ? "no likes"
+            : `${countLikes} like${countLikes > 1 ? "s" : ""}`}
+        </p>
       </div>
       <div className={s.widget}>
         <img src={star__1} alt="star" className={s.image} />
-        <p>{countStars === 0 ? "no" : countStars} stars</p>
+        <p>
+          {countStars === 0
+            ? "no stars"
+            : `${countStars} star${countStars > 1 ? "s" : ""}`}
+        </p>
       </div>
     </div>
   );
