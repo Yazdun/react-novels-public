@@ -27,7 +27,7 @@ export const AppRoutes = [
   },
   {
     exact: true,
-    path: "/user/:username",
+    path: "/user/:id",
     component: User,
   },
   {
