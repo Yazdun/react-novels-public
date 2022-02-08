@@ -1,1 +1,58 @@
 @import "../../scss/essentials";
+
+.wrapper {
+  @include breakpoint-up(laptop) {
+    padding: 0 $padding--mid;
+  }
+}
+
+.user {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: url("../../assets/backgrounds/background__2.svg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding--mid;
+
+  ul {
+    margin-left: $margin--mid;
+    background-color: $clr--bg--gradient;
+    padding: $padding--mid;
+    border-radius: $border--radius--low;
+    color: $clr--txt--light;
+  }
+
+  ul li {
+    margin: $margin--min 0;
+    display: flex;
+    align-items: center;
+  }
+
+  ul li span {
+    margin-left: $margin--min;
+  }
+  ul li svg {
+    margin-right: $margin--min;
+  }
+
+  @include breakpoint-up(laptop) {
+    border-radius: $border--radius--low;
+    justify-content: flex-start;
+    padding: $padding--high;
+  }
+}
+
+.image {
+  width: toRem(100);
+  height: toRem(100);
+
+  border-radius: 50%;
+  outline: 10px solid $clr--bg--gradient;
+
+  @include breakpoint-up(laptop) {
+    width: toRem(110);
+    height: toRem(110);
+  }
+}

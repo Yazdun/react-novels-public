@@ -1,5 +1,4 @@
 import { placeholder } from "../../assets";
-import { Button, Heading } from "../../elements";
 import s from "./styles.module.scss";
 import { HiOutlineMail } from "react-icons/hi";
 import { AiOutlineSetting, AiOutlineUser } from "react-icons/ai";

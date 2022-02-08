@@ -66,7 +66,7 @@ export const Notification = () => {
                   <Text customclass={s.text}>
                     You can try editing this review from your{" "}
                     <span>
-                      <Link to={`/dashboard/`}>dashboard</Link>
+                      <Link to={`/dashboard/reviews`}>dashboard</Link>
                     </span>{" "}
                     and it will be inspected again shortly.
                   </Text>

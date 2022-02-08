@@ -8,6 +8,8 @@ export const GET_USER_STATS = "/protected/user/stats/";
 export const GET_USER_LIKES = "/protected/user/likes/";
 export const GET_USER_STARS = "/protected/user/stars/";
 export const GET_USER_REVIEWS = "/protected/user/reviews/";
+// PUBLIC USER
+export const GET_USER_DATA = (id) => `/public/user/find/${id}`;
 // PUBLIC NOVEL
 export const GET_ALL_NOVELS = "/public/novel";
 export const GET_SINGLE_NOVEL = (id) => `/public/novel/find/${id}`;
