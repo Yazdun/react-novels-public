@@ -1,22 +1,21 @@
 @import "../../scss/essentials";
 
-.wrapper {
-  @include breakpoint-up(laptop) {
-    padding: 0 $padding--mid;
-  }
+.form {
+  width: 100%;
+  max-width: toRem(500);
+  margin: auto;
 }
 
-.rendertext {
-  padding: 0 $padding--mid;
-  @include breakpoint-up(laptop) {
-    padding: 0;
-  }
+.image {
+  width: 100%;
+  max-width: toRem(300);
+  height: toRem(300);
+  object-fit: cover;
+  border-radius: $border--radius--low;
+  margin: auto;
 }
 
-.status {
-  margin-top: $margin--mid;
-  padding: 0 $padding--mid;
-  @include breakpoint-up(laptop) {
-    padding: 0;
-  }
+.imageHolder {
+  display: flex;
+  justify-content: center;
 }

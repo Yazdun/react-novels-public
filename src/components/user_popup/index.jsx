@@ -7,13 +7,18 @@ import { Link } from "react-router-dom";
 import { AiOutlinePoweroff } from "react-icons/ai";
 import { BsMenuUp } from "react-icons/bs";
 import { useAuthActions } from "../../context/";
+import { useGet } from "../../hooks";
+import { GET_USER_INFO } from "../../services";
 
 export const UserPopup = () => {
   const ref = useRef();
   const { logOut } = useAuthActions();
-
+  const { getRequest, getLoading } = useGet();
   const [show, setShow] = useState(false);
+  const [image, setImage] = useState(null);
   const [untouched, setUntouched] = useState(true);
+
+  const handleProfile = (data) => setImage(data.user.image);
 
   useEffect(() => {
     const checkIfClickedOutside = (e) => {
@@ -28,6 +33,10 @@ export const UserPopup = () => {
       document.removeEventListener("mousedown", checkIfClickedOutside);
     };
   }, [show]);
+
+  useEffect(() => {
+    getRequest(GET_USER_INFO, handleProfile);
+  }, []);
 
   return (
     <div className={s.wrapper} ref={ref}>
@@ -49,7 +58,11 @@ export const UserPopup = () => {
       >
         <div className={s.card}>
           <div className={s.header} i>
-            <img className={s.image} src={placeholder} alt="" />
+            <img
+              className={s.image}
+              src={image ? image : placeholder}
+              alt="user"
+            />
           </div>
           <div className={s.actions}>
             <Link to="/dashboard/">

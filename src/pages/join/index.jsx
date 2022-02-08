@@ -14,7 +14,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import { UserFormfields } from "../../utils";
 import { usePost } from "../../hooks";
 import { JOIN } from "../../services";
-import { key__1, people__1 } from "../../assets";
+import { people__1 } from "../../assets";
 
 export const Join = () => {
   const { setToken } = useAuthActions();
