@@ -14,7 +14,7 @@
   padding: $padding--high $padding--min;
 
   @include breakpoint-up(laptop) {
-    border-radius: $border--radius--low;
+    border-radius: $border--radius--mid;
     flex-direction: row;
   }
 }
