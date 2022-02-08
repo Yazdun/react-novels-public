@@ -24,7 +24,7 @@ export const DashboardHeader = ({ user }) => {
           {email}
         </li>
       </ul>
-      <Link to="/setting" className={s.settings}>
+      <Link to="/edit/profile" className={s.settings}>
         <AiOutlineSetting />
       </Link>
     </div>

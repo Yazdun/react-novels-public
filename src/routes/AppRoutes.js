@@ -7,6 +7,7 @@ import {
   Notification,
   Novel,
   User,
+  Profile,
 } from "../pages";
 
 export const AppRoutes = [
@@ -44,6 +45,12 @@ export const AppRoutes = [
     exact: true,
     path: "/notifications",
     component: Notification,
+    private: true,
+  },
+  {
+    exact: true,
+    path: "/edit/profile",
+    component: Profile,
     private: true,
   },
   {

@@ -1,0 +1,51 @@
+@import "../../scss/essentials";
+
+.wrapper {
+  width: 100%;
+  // background-color: red;
+  border: 1px dashed $clr--border;
+  // height: toRem(80);
+  display: flex;
+  margin: $margin--mid 0;
+
+  height: toRem(80);
+  // margin-top: toRem(20) 0;
+  // justify-content: space-between;
+
+  label {
+    width: 100%;
+    font-size: 0.8rem;
+    padding: toRem(10) toRem(20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-out;
+  }
+}
+
+.loading {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: toRem(10) toRem(20);
+  border: 1px dashed $clr--border;
+  height: toRem(80);
+  margin-top: $margin--min;
+}
+
+.image {
+  width: toRem(50);
+  height: toRem(50);
+  object-fit: cover;
+  border-radius: $border--radius--low;
+}
+
+.file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+}

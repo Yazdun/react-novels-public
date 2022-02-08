@@ -20,3 +20,4 @@ export { DashboardWidgets } from "./dashboard_widgets";
 export { DashboardNoItem } from "./dashboard_no_item";
 export { NovelCard } from "./novel";
 export { DeleteModal } from "./delete";
+export { ImageUploader } from "./image_uploader";

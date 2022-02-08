@@ -1,4 +1,5 @@
 export { Author } from "./author";
+export { Profile } from "./profile";
 export { Dashboard } from "./dashboard";
 export { Error } from "./error";
 export { Home } from "./home";
