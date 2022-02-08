@@ -1,1 +1,82 @@
 @import "../../scss/essentials";
+
+@import "../../scss/essentials";
+
+.field {
+  position: relative;
+  padding: 15px 0 0;
+  margin-bottom: $margin--mid;
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  border: 1px solid $clr--border;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $clr--txt--primary;
+  padding: toRem(15) toRem(10);
+  background: transparent;
+  transition: border-color 0.2s;
+  font-weight: 400;
+  border-radius: $border--radius--low;
+  transition: 0.3s ease;
+  // background-color: $clr--bg--primary;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .label {
+    font-size: 1.3rem;
+    cursor: text;
+    left: toRem(10);
+    top: toRem(30);
+  }
+
+  &:focus {
+    font-weight: 400;
+    border: 1px solid $clr--txt--primary;
+    border-radius: $border--radius--low;
+    box-shadow: $shadow--1;
+    animation: 0.6s sholop;
+
+    ~ .label {
+      position: absolute;
+      top: 6px;
+      padding: 0 toRem(10);
+
+      display: block;
+      transition: 0.2s;
+      font-size: 0.9rem;
+      color: $clr--txt--primary;
+      font-weight: 400;
+    }
+  }
+
+  &:hover {
+    box-shadow: $shadow--1;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  display: block;
+  transition: 0.2s;
+  font-size: 0.9rem;
+  color: $clr--txt--transparent;
+  background-color: $clr--bg--primary;
+  padding: 0 toRem(10);
+  border-radius: $border--radius--low;
+}
+
+@keyframes sholop {
+  0% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
