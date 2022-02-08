@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+.left {
+  display: flex;
+  align-items: center;
+}
+
 .vl {
   border: 1px solid $clr--active--primary;
   // border-right: 3px solid $clr--active--primary;

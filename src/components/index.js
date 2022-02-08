@@ -9,6 +9,7 @@ export { UserCard } from "./user";
 export { Logo } from "./logo";
 export { Rate } from "./rate";
 export { UserPopup } from "./user_popup";
+export { SearchBar } from "./search_bar";
 export { Alert } from "./alert";
 export { WriteReview } from "./write_review";
 export { NovelReviews } from "./novel_reviews";

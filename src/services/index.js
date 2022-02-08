@@ -30,3 +30,5 @@ export const GET_ALL_NOTIFS = "/protected/notification/";
 // PUBLIC AUTHOR
 export const GET_AUTHOR = (id) => `/public/author/find/${id}`;
 export const GET_AUTHOR_NOVELS = (id) => `/public/author/novels/${id}`;
+// SEARCH
+export const SEARCH = (searchTerm) => `/public/search?searchTerm=${searchTerm}`;

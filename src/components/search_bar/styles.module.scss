@@ -1,0 +1,59 @@
+@import "../../scss/essentials";
+
+.btn {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-left: $margin--min;
+  display: flex;
+}
+
+.search {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  background-color: $clr--bg--primary;
+  width: 100%;
+  z-index: $zindex--search--bar;
+  transition: 0.9s ease;
+  //   border-bottom: 1px solid $clr--border--transparent;
+  box-shadow: $shadow--4;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  background-color: $clr--bg--primary;
+  font-size: 1.3rem;
+  width: 100%;
+
+  &::placeholder {
+    color: $clr--txt--transparent;
+  }
+}
+
+.show {
+  top: 0;
+  transition: 0.3s ease;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.novel {
+  // border: 1px solid $clr--border;
+  padding: $padding--low;
+  border-radius: $border--radius--low;
+  margin: $margin--mid auto;
+  border: 1px solid $clr--border;
+  width: 100%;
+  max-width: toRem(500);
+}
+
+.author {
+  width: 100%;
+  max-width: toRem(500);
+  margin: $margin--mid auto;
+}

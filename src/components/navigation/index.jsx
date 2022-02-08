@@ -7,13 +7,18 @@ import { Link } from "react-router-dom";
 import { UserPopup } from "../user_popup";
 import classnames from "classnames";
 import { useNoticesContext } from "../../context";
+import { SearchBar } from "../";
 
 export const Navigation = () => {
   const isLoggedIn = useAuthContext();
 
   return (
     <Container padding customclass={s.navigation}>
-      <Logo />
+      <div className={s.left}>
+        <Logo />
+        <SearchBar />
+      </div>
+
       {isLoggedIn ? <User /> : <NoUser />}
     </Container>
   );
