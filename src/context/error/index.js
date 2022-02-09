@@ -40,7 +40,7 @@ export const ErrorHandler = ({ children }) => {
       case errorStatusCode === 404:
         return (
           <Error
-            title="404 ! Not found ..."
+            title="404 ! Not found"
             info="this content either doesn't exist or has been deleted"
             action
           />
@@ -49,8 +49,8 @@ export const ErrorHandler = ({ children }) => {
       case errorStatusCode >= 500:
         return (
           <Error
-            title="500 ! Our fault ..."
-            info="there is a problem within our servers, we are looking into it ..."
+            title="500 ! Our fault"
+            info="there is a problem within our servers, we are looking into it"
             action
           />
         );

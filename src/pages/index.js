@@ -1,4 +1,5 @@
 export { Author } from "./author";
+export { Page404 } from "./page404";
 export { Profile } from "./profile";
 export { Dashboard } from "./dashboard";
 export { Error } from "./error";

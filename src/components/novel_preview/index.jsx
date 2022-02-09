@@ -17,7 +17,7 @@ export const NovelPreview = ({ novel }) => {
           {likes.length}
         </div>
       </div>
-      <Heading capitalize small customclass={s.title}>
+      <Heading capitalize small customclass={s.title} center>
         {title}
       </Heading>
     </div>

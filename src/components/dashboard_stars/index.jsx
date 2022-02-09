@@ -37,7 +37,7 @@ export const DashboardStars = () => {
   return (
     <div className={s.wrapper}>
       {authors.map((author) => {
-        return <AuthorPreview author={author} />;
+        return <AuthorPreview spaceBetween author={author} />;
       })}
     </div>
   );

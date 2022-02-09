@@ -8,6 +8,7 @@ import {
   Novel,
   User,
   Profile,
+  Page404,
 } from "../pages";
 
 export const AppRoutes = [
@@ -57,5 +58,9 @@ export const AppRoutes = [
     path: "/dashboard",
     component: Dashboard,
     private: true,
+  },
+  {
+    path: "*",
+    component: Page404,
   },
 ];
