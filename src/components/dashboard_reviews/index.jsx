@@ -32,8 +32,8 @@ export const DashboardReviews = () => {
   }
   return (
     <div>
-      {reviews.map((review) => {
-        return <ReviewCard review={review} hasPanel />;
+      {reviews.map((review, index) => {
+        return <ReviewCard key={index} review={review} hasPanel />;
       })}
     </div>
   );
