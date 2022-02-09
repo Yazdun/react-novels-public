@@ -63,6 +63,15 @@ const NovelGraphy = () => {
     getRequest(GET_AUTHOR_NOVELS(id), handleNovels);
   }, [id]);
 
+  if (getLoading) {
+    return (
+      <Heading small center uppercase customclass={s.loading}>
+        <Spinner small />
+        loading ...
+      </Heading>
+    );
+  }
+
   return (
     // <Container padding>
     <RenderNovelCards novels={novels} noPadding />
