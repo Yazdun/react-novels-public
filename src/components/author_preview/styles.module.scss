@@ -58,3 +58,13 @@
     font-size: 1.05rem;
   }
 }
+
+.spaceBetween {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: $padding--low $padding--mid;
+  .image {
+    margin-right: 0;
+    margin-left: $margin--low;
+  }
+}

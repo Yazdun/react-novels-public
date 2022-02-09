@@ -7,8 +7,11 @@ import classNames from "classnames";
 import { useGet } from "../../hooks";
 import { SEARCH } from "../../services";
 import { SearchedAuthors, SearchedNovels } from "./cards";
+import { useHistory } from "react-router-dom";
 
 export const SearchBar = () => {
+  const searchbarRef = useRef();
+  const history = useHistory();
   const [searchMode, setSearchMode] = useState(false);
   const [novels, setNovels] = useState([]);
   const [authors, setAuthors] = useState([]);
@@ -28,7 +31,32 @@ export const SearchBar = () => {
 
   useEffect(() => {
     input.current.focus();
+
+    const checkIfClickedOutside = (e) => {
+      if (
+        searchMode &&
+        searchbarRef.current &&
+        !searchbarRef.current.contains(e.target)
+      ) {
+        setSearchMode(false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
   }, [searchMode]);
+
+  useEffect(() => {
+    // Listen for changes to the current location.
+    const unlisten = history.listen(() => {
+      setSearchMode(false);
+    });
+    // cleanup the listener on unmount
+    return unlisten;
+  }, []);
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
@@ -43,7 +71,10 @@ export const SearchBar = () => {
       <button className={s.btn} onClick={() => setSearchMode(true)}>
         <FiSearch />
       </button>
-      <div className={classNames(s.search, searchMode && s.show)}>
+      <div
+        className={classNames(s.search, searchMode && s.show)}
+        ref={searchbarRef}
+      >
         <Container padding customclass={s.container}>
           <div className={s.field}>
             <input
@@ -53,7 +84,10 @@ export const SearchBar = () => {
               ref={input}
               onChange={handleChange}
             />
-            <button className={s.btn} onClick={() => setSearchMode(false)}>
+            <button
+              className={classNames(s.btn, s.close)}
+              onClick={() => setSearchMode(false)}
+            >
               <VscChromeClose />
             </button>
           </div>
@@ -68,7 +102,7 @@ export const SearchBar = () => {
 
 const Loading = () => {
   return (
-    <Heading small center uppercase>
+    <Heading small center uppercase customclass={s.loading}>
       <Spinner small />
       loading ...
     </Heading>

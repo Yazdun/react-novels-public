@@ -5,6 +5,12 @@
   font-weight: 400;
   margin-left: $margin--min;
   display: flex;
+
+  transition: 0.3s ease;
+}
+
+.close:hover {
+  transform: rotate(90deg);
 }
 
 .search {
@@ -43,8 +49,8 @@
 }
 
 .novel {
-  // border: 1px solid $clr--border;
-  padding: $padding--low;
+  padding: $padding--low $padding--mid;
+
   border-radius: $border--radius--low;
   margin: $margin--mid auto;
   border: 1px solid $clr--border;
@@ -56,4 +62,8 @@
   width: 100%;
   max-width: toRem(500);
   margin: $margin--mid auto;
+}
+
+.loading {
+  margin: $margin--high 0;
 }

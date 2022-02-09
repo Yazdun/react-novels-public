@@ -25,3 +25,12 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+.spaceBetween {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+
+  .title {
+    margin-right: $margin--low;
+  }
+}
