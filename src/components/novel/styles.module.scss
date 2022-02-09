@@ -34,3 +34,33 @@
     margin-right: $margin--low;
   }
 }
+
+.render {
+  padding: 0 $padding--mid;
+
+  @include breakpoint-up(laptop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+
+  @include breakpoint-up(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+}
+
+.customNovel {
+  padding: $padding--low $padding--mid;
+
+  border-radius: $border--radius--low;
+  margin: $margin--low auto;
+  border: 1px solid $clr--border--transparent;
+  // box-shadow: $shadow--1;
+  width: 100%;
+  max-width: toRem(500);
+}
+
+.noPadding {
+  padding: 0;
+}

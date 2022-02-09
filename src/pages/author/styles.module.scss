@@ -1,7 +1,11 @@
 @import "../../scss/essentials";
 
 .info {
+  width: 100%;
+  max-width: toRem(500);
+  margin: auto;
   @include breakpoint-up(laptop) {
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

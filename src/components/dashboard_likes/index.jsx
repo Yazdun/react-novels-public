@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { GET_USER_LIKES } from "../../services";
 import { useGet } from "../../hooks";
-import { DashboardNoItem, RenderNovelPreviews } from "..";
+import {
+  DashboardNoItem,
+  NovelCard,
+  RenderNovelCards,
+  RenderNovelPreviews,
+} from "..";
 import { BsHeartFill } from "react-icons/bs";
-import { Heading, Loading, Spinner } from "../../elements";
+import { Heading, Spinner } from "../../elements";
+import s from "./styles.module.scss";
 
 export const DashboardLikes = () => {
   const [novels, setNovels] = useState([]);
@@ -35,8 +41,8 @@ export const DashboardLikes = () => {
   }
 
   return (
-    <div>
-      <RenderNovelPreviews novels={novels} loading={getLoading} />
+    <div className={s.wrapper}>
+      <RenderNovelCards novels={novels} noPadding />
     </div>
   );
 };

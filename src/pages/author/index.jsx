@@ -1,7 +1,11 @@
 import s from "./styles.module.scss";
 import classnames from "classnames";
 import { Container, Heading, RenderText, Spinner } from "../../elements";
-import { AuthorInfo, RenderNovelPreviews } from "../../components";
+import {
+  AuthorInfo,
+  RenderNovelCards,
+  RenderNovelPreviews,
+} from "../../components";
 import { useGet } from "../../hooks";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -31,16 +35,19 @@ export const Author = () => {
 
   return (
     <>
-      <Container padding customclass={s.info}>
-        <AuthorInfo author={author} />
-        <div className={s.text}>
-          <Heading center uppercase customclass={s.header}>
-            biography
-          </Heading>
-          <RenderText content={author.bio.split("\n")} />
+      <Container padding>
+        <div className={s.info}>
+          <AuthorInfo author={author} />
+          <div className={s.text}>
+            <Heading center uppercase customclass={s.header}>
+              biography
+            </Heading>
+            <RenderText content={author.bio.split("\n")} />
+          </div>
         </div>
+
+        <NovelGraphy />
       </Container>
-      <NovelGraphy />
     </>
   );
 };
@@ -56,5 +63,9 @@ const NovelGraphy = () => {
     getRequest(GET_AUTHOR_NOVELS(id), handleNovels);
   }, [id]);
 
-  return <RenderNovelPreviews novels={novels} loading={getLoading} />;
+  return (
+    // <Container padding>
+    <RenderNovelCards novels={novels} noPadding />
+    // </Container>
+  );
 };

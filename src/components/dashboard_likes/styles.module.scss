@@ -1,1 +1,9 @@
 @import "../../scss/essentials";
+
+.wrapper {
+  padding: $padding--mid;
+  @include breakpoint-up(tablet) {
+    padding: 0;
+    margin: $margin--mid 0;
+  }
+}
