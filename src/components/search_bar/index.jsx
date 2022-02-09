@@ -1,4 +1,4 @@
-import { Container, Input } from "../../elements";
+import { Container, Heading, Input, Spinner } from "../../elements";
 import s from "./styles.module.scss";
 import { FiSearch } from "react-icons/fi";
 import { VscChromeClose } from "react-icons/vsc";
@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 import { useGet } from "../../hooks";
 import { SEARCH } from "../../services";
-import { AuthorPreview, NovelCard } from "..";
+import { SearchedAuthors, SearchedNovels } from "./cards";
 
 export const SearchBar = () => {
   const [searchMode, setSearchMode] = useState(false);
@@ -33,7 +33,7 @@ export const SearchBar = () => {
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       getRequest(SEARCH(searchTerm), handleData);
-    }, 1500);
+    }, 1000);
 
     return () => clearTimeout(delayDebounceFn);
   }, [searchTerm]);
@@ -57,23 +57,20 @@ export const SearchBar = () => {
               <VscChromeClose />
             </button>
           </div>
-          {authors.map((author) => {
-            return (
-              <div className={s.author}>
-                <AuthorPreview author={author} />
-              </div>
-            );
-          })}
-
-          {novels.map((novel) => {
-            return (
-              <div className={s.novel}>
-                <NovelCard novel={novel} />
-              </div>
-            );
-          })}
+          {getLoading && <Loading />}
+          <SearchedAuthors authors={authors} />
+          <SearchedNovels novels={novels} />
         </Container>
       </div>
     </>
+  );
+};
+
+const Loading = () => {
+  return (
+    <Heading small center uppercase>
+      <Spinner small />
+      loading ...
+    </Heading>
   );
 };
