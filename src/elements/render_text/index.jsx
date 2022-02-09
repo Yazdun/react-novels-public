@@ -25,9 +25,11 @@ export const RenderText = ({ content }) => {
   return (
     <>
       <Text customclass={s.text}>{content[0]}</Text>
-      <button className={s.btn} onClick={() => setReadmore(true)}>
-        Read more ...
-      </button>
+      {content.length > 1 && (
+        <button className={s.btn} onClick={() => setReadmore(true)}>
+          Read more ...
+        </button>
+      )}
     </>
   );
 };
