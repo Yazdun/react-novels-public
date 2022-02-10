@@ -23,3 +23,4 @@ export { NovelCard } from "./novel";
 export { DeleteModal } from "./delete";
 export { ImageUploader } from "./image_uploader";
 export { RenderNovelCards } from "./novel";
+export { BackToTop } from "./BackToTop";

@@ -3,6 +3,7 @@ import "./scss/App.scss";
 import { AppRoutes, PrivateRoute } from "./routes";
 import { Route, Switch } from "react-router-dom";
 import { Alert, Navigation } from "./components";
+import { BackToTop } from "./components/";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <NoticesProvider>
         <Navigation />
         <Alert />
+        <BackToTop />
         <Switch>
           {AppRoutes.map((route, item) =>
             route.private ? (
