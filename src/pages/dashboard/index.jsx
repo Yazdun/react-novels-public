@@ -32,7 +32,7 @@ export const Dashboard = () => {
 
   return (
     <Container customclass={s.wrapper}>
-      {/* <DashboardHeader user={user} />
+      <DashboardHeader user={user} />
       <div className={s.links}>
         {links.map((link) => {
           const { title, icon, url, to } = link;
@@ -53,7 +53,7 @@ export const Dashboard = () => {
       <Route component={DashboardWidgets} path={`${path}/`} exact />
       <Route component={DashboardLikes} path={`${path}/likes`} />
       <Route component={DashboardReviews} path={`${path}/reviews`} />
-      <Route component={DashboardStars} path={`${path}/stars`} /> */}
+      <Route component={DashboardStars} path={`${path}/stars`} />
     </Container>
   );
 };
