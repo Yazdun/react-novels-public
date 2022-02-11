@@ -20,7 +20,7 @@ export const ImageUploader = ({ setImage, image }) => {
     try {
       unintercepted_instance
         .post(
-          `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_KEY}/image/upload`,
+          `https://api.cloudinary.com/v1_1/dorbhejqh/image/upload`,
           formData
         )
         .then((res) => {
