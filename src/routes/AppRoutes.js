@@ -54,11 +54,11 @@ export const AppRoutes = [
     component: Profile,
     private: true,
   },
-  {
-    path: "/dashboard",
-    component: Dashboard,
-    private: true,
-  },
+  // {
+  //   path: "/dashboard",
+  //   component: Dashboard,
+  //   private: true,
+  // },
   {
     path: "*",
     component: Page404,
