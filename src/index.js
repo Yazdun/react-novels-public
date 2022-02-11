@@ -9,7 +9,7 @@ import en from "javascript-time-ago/locale/en.json";
 TimeAgo.addDefaultLocale(en);
 
 ReactDOM.render(
-  <BrowserRouter basename="/">
+  <BrowserRouter basename="/index.html">
     <AuthProvider>
       <App />
     </AuthProvider>
