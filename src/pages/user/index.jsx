@@ -49,9 +49,8 @@ export const User = () => {
           </li>
           <li>
             <AiOutlineFieldTime />
-            Joined
             <span>
-              <ReactTimeAgo date={user.createdAt} locale="en-US" />
+              Joined <ReactTimeAgo date={user.createdAt} locale="en-US" />
             </span>
           </li>
         </ul>
