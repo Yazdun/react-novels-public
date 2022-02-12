@@ -31,7 +31,7 @@
 
 ## About The Project
 
-This is react project built for my [Novels API](https://github.com/Yazdun/react-novels-public/issues), This website is completely responsive for all sorts of devices. Users can view, like and review their favourite novels and also mark their favourite authors with an star, This website uses [Novels API](https://github.com/Yazdun/react-novels-public/issues) and also it has separate [Admin Panel](https://github.com/Yazdun/react-novels-admin) which is also built with react.
+This is react project built for my [Novels API](https://github.com/Yazdun/react-novels-public/issues), This website is completely responsive for all sorts of devices. Users can view, like and review their favourite novels and also mark their favourite authors with a star, This website uses [Novels API](https://github.com/Yazdun/react-novels-public/issues) and also it has separate [Admin Panel](https://github.com/Yazdun/react-novels-admin) which is also built with react.
 
 ## Built With
 
