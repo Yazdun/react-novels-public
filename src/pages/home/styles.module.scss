@@ -11,11 +11,13 @@
   background-image: url("./backgrounds/mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: toRem(570);
+  height: toRem(400);
   border-bottom: 10px solid $clr--bg--primary;
 
   @include breakpoint-up(tablet) {
     // height: toRem(400);
+    height: toRem(570);
+
     background-image: url("./backgrounds/tablet.svg");
   }
 
