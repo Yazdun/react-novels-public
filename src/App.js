@@ -2,7 +2,7 @@ import { ErrorHandler, NoticesProvider } from "./context";
 import "./scss/App.scss";
 import { AppRoutes, PrivateRoute } from "./routes";
 import { Route, Switch } from "react-router-dom";
-import { Alert, Navigation } from "./components";
+import { Alert, Footer, Navigation } from "./components";
 import { BackToTop } from "./components/";
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
             )
           )}
         </Switch>
+        <Footer />
       </NoticesProvider>
     </ErrorHandler>
   );
