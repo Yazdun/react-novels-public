@@ -1,5 +1,4 @@
 import s from "./styles.module.scss";
-// import classnames from "classnames";
 import { useAuthContext, useNoticesContext } from "../../context";
 import { Button, Formfield, RenderErrors, Text } from "../../elements";
 import { Link } from "react-router-dom";
@@ -10,7 +9,7 @@ import { RadioGroup, RadioButton } from "react-radio-buttons";
 import { RiMailSendLine } from "react-icons/ri";
 import { usePost } from "../../hooks";
 import { CREATE_REVIEW } from "../../services";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 export const WriteReview = ({ novelId, novelTitle }) => {
   const isLoggedIn = useAuthContext();

@@ -1,5 +1,4 @@
 import s from "./styles.module.scss";
-import classnames from "classnames";
 import { Loading, RenderText, Text } from "../../elements";
 import { useGet } from "../../hooks";
 import { useParams } from "react-router-dom";

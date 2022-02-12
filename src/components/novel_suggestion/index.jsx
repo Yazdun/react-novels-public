@@ -1,14 +1,11 @@
 import s from "./styles.module.scss";
-import classnames from "classnames";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { useGet } from "../../hooks";
 import { useHistory, useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import { GET_RELATED_NOVELS } from "../../services";
-import { Container, Heading, Loading, Text } from "../../elements";
-import { Link } from "react-router-dom";
+import { Container, Loading, Text } from "../../elements";
 
 export const NovelSuggestion = () => {
   const [novels, setNovels] = useState([]);

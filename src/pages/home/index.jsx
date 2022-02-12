@@ -3,8 +3,7 @@ import classnames from "classnames";
 import { Container, Heading, Text } from "../../elements";
 import { RenderNovelPreviews } from "../../components";
 import { useGet } from "../../hooks";
-import { useEffect } from "react";
-import { useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import { GET_ALL_NOVELS } from "../../services";
 
 export const Home = () => {

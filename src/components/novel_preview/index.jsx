@@ -3,7 +3,7 @@ import classnames from "classnames";
 import { Container, Heading } from "../../elements";
 import { BsHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { useState, useRef } from "react/cjs/react.development";
+import { useState } from "react";
 import { Loading } from "../../elements";
 
 export const NovelPreview = ({ novel }) => {
