@@ -44,11 +44,13 @@
 }
 .show {
   transition: 0.5s ease-in-out;
+  opacity: 1;
 }
 
 .hide {
   transition: 0.5s ease-in-out;
   bottom: -100%;
+  opacity: 0;
 }
 
 .close {

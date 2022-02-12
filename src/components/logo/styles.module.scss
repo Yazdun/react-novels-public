@@ -13,7 +13,9 @@
     margin-right: $margin--min;
   }
 
-  &:hover {
-    color: $clr--active--secondary;
+  @include breakpoint-up(laptop) {
+    &:hover {
+      color: $clr--active--secondary;
+    }
   }
 }
