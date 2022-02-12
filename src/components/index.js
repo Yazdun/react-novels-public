@@ -24,4 +24,3 @@ export { DeleteModal } from "./delete";
 export { ImageUploader } from "./image_uploader";
 export { RenderNovelCards } from "./novel";
 export { BackToTop } from "./BackToTop";
-export { Footer } from "./footer";

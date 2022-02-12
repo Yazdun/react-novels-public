@@ -21,7 +21,6 @@ function App() {
             )
           )}
         </Switch>
-        <Footer />
       </NoticesProvider>
     </ErrorHandler>
   );
