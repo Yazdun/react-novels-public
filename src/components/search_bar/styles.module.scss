@@ -17,6 +17,7 @@
   position: absolute;
   left: 0;
   top: -100%;
+  opacity: 0;
   background-color: $clr--bg--primary;
   width: 100%;
   z-index: $zindex--search--bar;
@@ -40,6 +41,7 @@
 .show {
   top: 0;
   transition: 0.3s ease;
+  opacity: 1;
 }
 
 .field {
