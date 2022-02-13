@@ -56,7 +56,7 @@ This is react project built for my [Novels API](https://github.com/Yazdun/react-
    ```js
    axios.defaults.baseURL = "your local host server";
    ```
-4. I used [Cloudaniry](https://cloudinary.com/) to hanlde uploading images from `./src/components/image-uploader` component, so you must create a free Cloudinary account, then create `.env` file inside `./src` and put your cloudinary key inside `REACT_APP_CLOUDINARY_KEY`
+4. I used [Cloudaniry](https://cloudinary.com/) to handle uploading images from `./src/components/image-uploader` component, so you must create a free Cloudinary account, then create `.env` file inside `./src` and put your cloudinary key inside `REACT_APP_CLOUDINARY_KEY`
    ```
    REACT_APP_CLOUDINARY_KEY=YOUR CLOUDINARY KEY
    ```
